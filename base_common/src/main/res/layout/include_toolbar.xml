@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+    设置minHeight：解决Toolbar修改高度后返回按钮不能居中
+    app:layout_scrollFlags="scroll|enterAlways"
+    -->
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/commoninclude_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@drawable/shape"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/toolbar_height"
+            app:navigationIcon="@drawable/back_white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationContentDescription="back"
+            app:titleMarginStart="0dp"
+            app:theme="@style/ToolbarTheme"/>
+</layout>

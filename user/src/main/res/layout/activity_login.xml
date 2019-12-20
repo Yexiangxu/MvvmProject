@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="view"
+            type="com.lazyxu.user.ui.login.LoginActivity" />
+
+        <variable
+            name="viewModel"
+            type="com.lazyxu.user.ui.login.LoginViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_toolbar" />
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/etlogin_height"
+            android:hint="请输入手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:text="@={viewModel.userPhone}"
+            android:textColor="@color/black_ff333333"
+            tools:text="hh" />
+
+        <EditText
+            android:id="@+id/etUserSecret"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/etlogin_height"
+            android:hint="请输入用户密码"
+            android:text="@={viewModel.userPassword}"
+            android:textColor="@color/black_ff333333" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{view::onClick}"
+            android:text="登录" />
+    </LinearLayout>
+</layout>

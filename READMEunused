@@ -1,0 +1,36 @@
+1. 使用今日头条屏幕适配方案
+2. 使用 ImmersionBar 处理 StatusBar
+####kotlin配置
+//必须
+apply plugin: 'kotlin-android'
+//快捷的findviewfindid操作，建议加上
+apply plugin: 'kotlin-android-extensions'
+//kotlin使用编译注解
+apply plugin: 'kotlin-kapt'
+android {
+    ...
+    kapt {
+        generateStubs = true
+    }
+}
+dependencies {
+    ...
+    implementation 'com.google.dagger:dagger:2.19'
+    //annotationProcessor:注解处理器
+    //Kotlin 开发 Android 应用时，要在预编译阶段处理注解必须使用 kotlin-kapt,而不能使用annotationProcessor,kotlin-kapt不是Android Gradle 内置插件需要额外引入
+    kapt  'com.google.dagger:dagger-compiler:2.19'
+}
+
+
+####kotlin技巧
+java和kotlin相互转化
+1. java转kotlin快捷键：Ctrl+Shift+Alt+K 直接转换
+2. kotlin转java：Tools->Kotlin->Show Kotlin Bytecode->Decompile
+一般情况下java转kotlin容易，但从kotlin再转到java就费事
+
+####kotlin注意事项
+
+了解viewmodel原理结合people_mvvm
+
+                       
+

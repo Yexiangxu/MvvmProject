@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'android-aspectjx'
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+android {
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            v1SigningEnabled true // 只用v1签名：在7.0上不会使用更安全的验证方式。只用v1签名可以移动甚至重新压缩文件，不安全.
+            v2SigningEnabled true //1.更安全;2.可缩短在设备上进行验证的时间（不需要费时地解压缩然后验证）从而加快应用安装速度
+        }
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.lazyxu.mvvmproject"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+//        multiDexEnabled true
+        testInstrumentationRunner "android.support.Config.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true//minifyEnabled = true，告诉 Proguard 删除所有未使用的方法和类，以此来减少 classes.dex 文件大小
+            zipAlignEnabled true
+            shrinkResources true //shrinkResources = true，删除所有在项目中不会使用的res资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField 'String', 'URL', '"http://www.baidu.com"' // 自定义BuildConfig
+            resValue 'string', 'app_name', 'LazyXu' //设置不同情况下 res 文件夹下的 string 文件下 welcome 值 为 xxx
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kapt {
+        generateStubs = true
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+//    生成的apk文件名
+    android.applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            variant.productFlavors.each { flavor ->
+                def project = "lazyxu"
+                def separator = "_"
+                def buildType = variant.variantData.variantConfiguration.buildType.name
+                def versionCode = variant.versionCode
+                def time = new Date().format("yyyyMMdd")
+                if (buildType == "release") {
+                    output.outputFileName = project + versionCode + separator + flavor.name + ".apk"
+                } else {
+                    output.outputFileName = project + versionCode + separator + flavor.name + separator + buildType + time + ".apk"
+                }
+            }
+        }
+    }
+
+    flavorDimensions "company"
+    productFlavors {
+        xiaomi {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]// 或 manifestPlaceholders.put("UMENG_CHANNEL_VALUE", 'xiaomi')
+        }
+        wandoujia {
+        }
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    if (isModule.toBoolean()) {
+        implementation project(':base_common')
+    } else {
+        implementation project(':film')
+    }
+    if (isModule.toBoolean()) {
+        implementation project(':base_common')
+    } else {
+        implementation project(':user')
+    }
+    //di
+    kapt 'com.google.dagger:dagger-compiler:2.19'
+    kapt 'com.google.dagger:dagger-android-processor:2.19'
+
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+    kapt 'androidx.room:room-compiler:2.0.0'
+}

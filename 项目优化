@@ -1,0 +1,43 @@
+#### 1. 使用系统流行控件
+侧滑：DrawerLayout+NavigationView
+#### 1. 使用MVVM+LivaData+
+1. 获取viewmodel
+```
+mLoginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
+```
+当viewmodel中构造函数有参数时，需要用下面方式传参
+```
+mLoginViewModel = ViewModelProviders.of(this,factory).get(LoginViewModel.class);
+```
+
+livadata使用
+
+1. 用今日头条屏幕适配
+2. 个人中心添加缓存，清除缓存
+1. HttpModule中用TLS替换ssl
+2. 版本更新下载功能，使用IntentService实现下载，使用广播判断网络是否连接 网络连接自动继续下载
+
+https://blog.csdn.net/codeyanbao/article/details/81813501
+3. 转场动画
+3. 网络用广播监听，断网提示
+4. 协议类如果未勾选用颤抖动画
+5. 通知栏播放下一曲等功能用前台服务
+6. 使用夜间模式切换
+7. 使用矢量图动画实现分享功能
+8. 版本更新使用断点下载
+9. 流行控件
+
+a. snackbar、TabLayout、FloatActionBar、NavigationView、AppBarLayout、
+CoordinatorLayout、CollapsingToolbarLayout、PopMeun和Popwindow、
+colorTint设置不同颜色图
+
+b. Dialog、DialogFragment、BottomSheetDialog
+
+
+
+引导页：使用视频
+
+https://www.jianshu.com/p/f97614a8a15b
+https://juejin.im/entry/57bdaf96efa631005a93f256
+https://www.jianshu.com/p/2b489bb119cb
+https://blog.csdn.net/linglongxin24/article/details/53115253

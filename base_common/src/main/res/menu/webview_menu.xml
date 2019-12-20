@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/wb_share"
+        android:orderInCategory="100"
+        android:title="@string/wb_menu_share"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/wb_cope"
+        android:orderInCategory="100"
+        android:title="@string/wb_menu_cope"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/wb_refresh"
+        android:orderInCategory="100"
+        android:title="@string/wb_menu_refresh"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/wb_open"
+        android:orderInCategory="100"
+        android:title="@string/wb_menu_open"
+        app:showAsAction="never" />
+</menu>

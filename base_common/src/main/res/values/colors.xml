@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--基本颜色-->
+    <color name="white">#ffffffff</color>
+    <color name="statusbarColor">#ffce3d3a</color>
+    <color name="navigationBarColor">#00ffffff</color>
+    <color name="theme_colorControlHighlight">#bbbbbb</color>
+
+
+    <!--全局theme-->
+
+
+
+
+
+
+
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="toast_main">#b51d1a1a</color>
+
+    <color name="gray_bbbbbb">#bbbbbb</color>
+    <color name="bg_maincolor">#ffffff</color>
+    <color name="tv_maincolor">#171717</color>
+    <color name="select_maincolor">#D81B60</color>
+    <color name="theme_colorControlNormal">#ffffff</color>
+
+    <color name="shape1">#5d8df7</color>
+    <color name="shape2">#5EB9F8</color>
+    <color name="shape3">#5CC2F8</color>
+    <color name="title_maincolor">#ffffff</color>
+    <color name="scrollbarClolr">#7d7d7d7d</color>
+
+    <color name="gray_ededed">#ededed</color>
+    <color name="line_color">#5d8df7</color>
+    <color name="half_transparent">#4000</color>
+    <color name="black_ff333333">#ff333333</color>
+</resources>

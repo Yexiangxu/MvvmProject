@@ -1,0 +1,30 @@
+1. 继承 SurfaceView 并实现 SurfaceHolder.Callback 接口
+2. 重写
+```
+    @Override
+    public void surfaceCreated(SurfaceHolder holder) {
+
+    }
+
+    @Override
+    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+
+    }
+
+    @Override
+    public void surfaceDestroyed(SurfaceHolder holder) {
+
+    }
+```
+3. SurfaceHolder
+surface控制器，用来操纵surface。处理它的Canvas上画的效果和动画，控制表面，大小，像素等。
+
+(1)、abstract void addCallback(SurfaceHolder.Callback callback);
+// 给SurfaceView当前的持有者一个回调对象。
+(2)、abstract Canvas lockCanvas();
+// 锁定画布，一般在锁定后就可以通过其返回的画布对象Canvas，在其上面画图等操作了。
+(3)、abstract Canvas lockCanvas(Rect dirty);
+// 锁定画布的某个区域进行画图等..因为画完图后，会调用下面的unlockCanvasAndPost来改变显示内容。
+// 相对部分内存要求比较高的游戏来说，可以不用重画dirty外的其它区域的像素，可以提高速度。
+(4)、abstract void unlockCanvasAndPost(Canvas canvas);
+// 结束锁定画图，并提交改变。

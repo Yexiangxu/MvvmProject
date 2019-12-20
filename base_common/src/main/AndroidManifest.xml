@@ -1,0 +1,52 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lazyxu.base">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--要想在别的App上能成功调起App，必须添加intent过滤器-->
+    <!--https://www.baidu.com/baidu?tn=monline_3_dg&ie=utf-8&wd=Android%E5%94%A4%E8%B5%B7%E6%8B%BC%E5%A4%9A%E5%A4%9A-->
+    <!--mmt://borrow:6666/borrowDetail?borrowid=10011002-->
+
+
+    <!--
+    1.configChanges属性作用是当这些属性变化时不会导致重新调用各个生命周期，而是仅仅执行Activity中的onConfigurationChanged函数
+    2.播放视频需要开启硬加速
+    -->
+    <application>
+        <activity
+            android:name=".view.webview.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <data
+                    android:host="borrow"
+                    android:path="/borrowDetail"
+                    android:port="6666"
+                    android:scheme="mmt" />
+                <!--下面这几行也必须得设置-->
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!--========================immersionbar 配置开始===============-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <!--========================immersionbar 配置结束===============-->
+    </application>
+
+</manifest>

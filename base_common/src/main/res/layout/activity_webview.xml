@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--  android:layerType="software"  -->
+        <WebView
+                android:id="@+id/wbMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarSize="@dimen/dp2"
+                android:scrollbarThumbVertical="@color/shape1" />
+
+        <com.lazyxu.base.view.WebProgress
+                android:id="@+id/wbProgress"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

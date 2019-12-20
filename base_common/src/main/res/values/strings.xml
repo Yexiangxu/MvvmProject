@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MVVM Demo</string>
+    <string name="string_rating">评分：</string>
+    <string name="string_type">类型：</string>
+    <string name="login">登录</string>
+    <string name="share">分享</string>
+    <string name="wb_menu_open">浏览器打开</string>
+    <string name="wb_menu_cope">复制链接</string>
+    <string name="wb_menu_share">分享</string>
+    <string name="wb_menu_refresh">刷新页面</string>
+
+    <string name="about_me">关于我</string>
+    <string name="update_log">更新日志</string>
+    <string name="menu_search">搜索</string>
+</resources>

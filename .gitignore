@@ -1,0 +1,12 @@
+.gradle
+.idea
+gradle
+build
+*.iml
+*.apk
+*.log
+
+
+# *.a     忽略所有 .a 结尾的文件
+# build/  忽略 build/ 目录下的所有文件
+#keystore.properties
