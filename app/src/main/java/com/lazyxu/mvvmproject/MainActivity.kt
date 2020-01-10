@@ -1,7 +1,9 @@
 package com.lazyxu.mvvmproject
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -11,7 +13,6 @@ import androidx.databinding.DataBindingUtil
 import com.afollestad.materialdialogs.MaterialDialog
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
-import com.lazyxu.base.router.LoginNavigationCallbackImpl
 import com.lazyxu.base.router.RouterUrl
 import com.lazyxu.base.utils.*
 import com.lazyxu.mvvmproject.databinding.ActivityMainBinding
@@ -86,29 +87,39 @@ open class MainActivity : AppCompatActivity() {
                 drawerLayout.openDrawer(GravityCompat.START)
             }
             tvUserName -> {
-                ARouter.getInstance().build(RouterUrl.LOGIN).navigation()
+                ARouter.getInstance().build(RouterUrl.User.LOGIN).navigation()
             }
             llSetting -> {
-                ARouter.getInstance().build(RouterUrl.SETTING).navigation(this)
+                ARouter.getInstance().build(RouterUrl.User.SETTING).navigation(this)
+            }
+            llFeedback->{
+                ARouter.getInstance().build(RouterUrl.User.ABOUTUS).navigation(this)
             }
             llNavExit -> {
-                SpUtil.remove(Constants.SP_IS_LOGIN)
+                SpUtilDelete.remove(Constants.SP_IS_LOGIN)
             }
         }
     }
 
-    private var mLastPressedTime: Long = 0
-    override fun onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
-            if (System.currentTimeMillis() - mLastPressedTime < 2000) {
-                ActivityStack.getInstance().popAllActivity(false)
-                super.onBackPressed()
-            } else {
-                mLastPressedTime = System.currentTimeMillis()
-                AppToast.show("再按一次退出")
-            }
+    private var exitTime: Long = 0
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else
+                if ((System.currentTimeMillis() - exitTime) > 2000) {
+                    AppToast.show(R.string.exit_hint)
+                    exitTime = System.currentTimeMillis()
+                } else {
+                    val startMain = Intent(Intent.ACTION_MAIN)
+                    startMain.addCategory(Intent.CATEGORY_HOME)
+                    startMain.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(startMain)
+                    //需要所有的Activity继承BaseActivity
+                    ActivityStack.INSTANCE.popAllActivity(false)
+                }
+            return true
         }
+        return super.onKeyDown(keyCode, event)
     }
 }

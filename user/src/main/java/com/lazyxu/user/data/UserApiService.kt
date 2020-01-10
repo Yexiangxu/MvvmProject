@@ -1,7 +1,7 @@
 package com.lazyxu.user.data
 
-import com.lazyxu.user.data.entity.LoginBean
-import io.reactivex.Flowable
+import com.lazyxu.base.data.BaseBean
+import com.lazyxu.user.data.entity.db.User
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
@@ -15,14 +15,13 @@ interface UserApiService {
      */
     @FormUrlEncoded
     @POST("https://www.wanandroid.com/user/login")
-    fun login(@Field("username") username: String, @Field("password") password: String): Flowable<LoginBean>
-
-    /**
-     * 玩安卓注册
-     */
-    @FormUrlEncoded
-    @POST("https://www.wanandroid.com/user/register")
-    fun register(@Field("username") username: String, @Field("password") password: String, @Field("repassword") repassword: String): Flowable<LoginBean>
+    suspend fun login(@Field("username") username: String, @Field("password") password: String): BaseBean<User>
+//    /**
+//     * 玩安卓注册
+//     */
+//    @FormUrlEncoded
+//    @POST("https://www.wanandroid.com/user/register")
+//    fun register(@Field("username") username: String, @Field("password") password: String, @Field("repassword") repassword: String): Flowable<LoginBean>
 
 
 }

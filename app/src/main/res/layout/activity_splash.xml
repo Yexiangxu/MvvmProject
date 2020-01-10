@@ -23,7 +23,7 @@
             android:id="@+id/tvSkip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="跳过3s"
+            android:text="@string/s_skip"
             android:onClick="@{view::onClick}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

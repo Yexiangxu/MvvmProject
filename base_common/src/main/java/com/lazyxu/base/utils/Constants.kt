@@ -8,4 +8,10 @@ package com.lazyxu.base.utils
  */
 object Constants {
     const val SP_IS_LOGIN = "sp_is_login"
+
+    class Database {
+        companion object {
+            const val DB_NAME = "lazyxu.db"
+        }
+    }
 }

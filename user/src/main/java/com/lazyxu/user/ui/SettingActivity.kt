@@ -12,7 +12,7 @@ import com.lazyxu.user.R
  * Description:
  * FIXME
  */
-@Route(path = RouterUrl.SETTING)
+@Route(path = RouterUrl.User.SETTING)
 class SettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

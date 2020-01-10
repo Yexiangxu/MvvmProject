@@ -16,7 +16,7 @@ object AppToast {
     private var toast: Toast? = null
 
     fun show(message: String) {
-        val context = BaseApplication.getInstance().applicationContext
+        val context = BaseApplication.INSTANCE.applicationContext
         if (toast == null) {
             toast = Toast(context)
         }
@@ -44,6 +44,6 @@ object AppToast {
     }
 
     fun show(@StringRes message: Int) {
-        show(BaseApplication.getInstance().applicationContext.getString(message))
+        show(BaseApplication.INSTANCE.applicationContext.getString(message))
     }
 }

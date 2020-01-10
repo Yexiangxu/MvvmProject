@@ -1,26 +1,18 @@
 package com.lazyxu.base.utils
 
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.os.Build
-import android.os.Handler
-import android.os.Looper
-import androidx.core.content.pm.PackageInfoCompat
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.WindowManager
-
-import com.lazyxu.base.base.BaseApplication
 
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileReader
 import android.content.pm.ApplicationInfo
-import java.nio.file.Files.size
-
 
 
 object DeviceUtil {

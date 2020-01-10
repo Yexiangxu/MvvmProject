@@ -26,6 +26,8 @@ import com.lazyxu.base.utils.NetUtils;
 import com.lazyxu.base.router.RouterUrl;
 import com.lazyxu.base.view.WebProgress;
 
+import dalvik.system.DexClassLoader;
+
 import static android.os.Build.VERSION_CODES.LOLLIPOP;
 
 
@@ -250,7 +252,7 @@ public class WebViewActivity extends AppCompatActivity implements IWebView {
 
     @Override
     public void onPageFinished(WebView view, String url) {
-        if (!NetUtils.isNetworkConnected()) {
+        if (!NetUtils.isNetworkConnected(this)) {
             mProgressBar.hide();
         }
     }

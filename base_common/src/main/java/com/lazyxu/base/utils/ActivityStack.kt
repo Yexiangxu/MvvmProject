@@ -14,27 +14,23 @@ import kotlin.system.exitProcess
  * FIXME
  */
 class ActivityStack private constructor() {
-    //stack栈，先进后出
+    //stack栈，先进后出,继承Vector线程安全
     private var mActivities = Stack<Activity>()
 
     companion object {
-        fun getInstance(): ActivityStack {
-            return Holder.INSTANCE
-        }
-    }
-
-    private object Holder {
-        val INSTANCE = ActivityStack()
+        val INSTANCE: ActivityStack by lazy(mode = LazyThreadSafetyMode.SYNCHRONIZED) { ActivityStack() }
     }
 
     fun addActivity(activity: Activity) {
         this.mActivities.add(activity)
     }
 
-    fun removeActivity(activity: Activity?) {
-        if (!this.mActivities.isEmpty() && this.mActivities.contains(activity)) {
-            this.mActivities.remove(activity)
-            activity?.finish()
+    fun removeActivity(activity: Activity) {
+        with(activity) {
+            if (!mActivities.isEmpty() && mActivities.contains(activity)) {
+                mActivities.remove(this)
+                this.finish()
+            }
         }
     }
 
@@ -47,23 +43,21 @@ class ActivityStack private constructor() {
             exitProcess(-1)
         }
     }
+
     private fun popActivity() {
         if (!this.mActivities.isEmpty()) {
             //pop栈顶元素出栈
             (mActivities.pop() as Activity).finish()
         }
     }
+
     fun popAllActivityExceptTop() {
         while (this.mActivities.size > 1) {
-            val activity: Activity? = this.mActivities[0] as Activity
+            val activity: Activity = this.mActivities[0] as Activity
             this.mActivities.remove(activity)
-            activity?.finish()
+            activity.finish()
         }
     }
-
-
-
-
 
 
     private fun hideSoftKeyBoard(activity: Activity) {

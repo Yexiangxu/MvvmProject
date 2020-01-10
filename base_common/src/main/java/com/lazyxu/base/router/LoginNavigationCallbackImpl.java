@@ -20,6 +20,6 @@ public class LoginNavigationCallbackImpl implements NavigationCallback {
     public void onInterrupt(Postcard postcard) {
         String path = postcard.getPath();
         Bundle bundle = postcard.getExtras();
-        ARouter.getInstance().build(RouterUrl.LOGIN).with(bundle).withString(RouterUrl.PATH, path).greenChannel().navigation();
+        ARouter.getInstance().build(RouterUrl.User.LOGIN).with(bundle).withString(RouterUrl.PATH, path).greenChannel().navigation();
     }
 }

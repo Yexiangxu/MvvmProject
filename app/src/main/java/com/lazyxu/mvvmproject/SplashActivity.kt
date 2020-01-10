@@ -1,18 +1,16 @@
 package com.lazyxu.mvvmproject
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.KeyEvent
+import android.os.CountDownTimer
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.lazyxu.base.aop.annotation.CheckNet
 import com.lazyxu.base.router.ArouterUtils
 import com.lazyxu.base.router.RouterUrl
-import com.lazyxu.base.utils.ActivityStack
-import com.lazyxu.base.aop.annotation.SingleClick
 import com.lazyxu.mvvmproject.databinding.ActivitySplashBinding
+import kotlinx.android.synthetic.main.activity_splash.*
+
 
 /**
  * User: xuyexiang
@@ -21,33 +19,37 @@ import com.lazyxu.mvvmproject.databinding.ActivitySplashBinding
  * FIXME
  */
 class SplashActivity : AppCompatActivity() {
-    lateinit var mdatabinding: ActivitySplashBinding
+    private lateinit var mdatabinding: ActivitySplashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mdatabinding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
-        mdatabinding.view=this
+        mdatabinding.view = this
+        countDownTimer.start()
     }
-    @SingleClick
+
     @CheckNet
     fun onClick(view: View) {
-        ArouterUtils.unInterceptorClose(this, RouterUrl.MAIN)
+        jumpMain()
     }
-    var exitTime = 0L
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if ((System.currentTimeMillis() - exitTime) > 2000) {//
-                // 如果两次按键时间间隔大于2000毫秒，则不退出
-                Toast.makeText(this@SplashActivity, "再按退出", Toast.LENGTH_SHORT).show()
-                exitTime = System.currentTimeMillis()// 更新mExitTime
-            } else {
-                val startMain = Intent(Intent.ACTION_MAIN)
-                startMain.addCategory(Intent.CATEGORY_HOME)
-                startMain.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(startMain)
-                ActivityStack.getInstance().popAllActivity(false)
-            }
-            return true
+
+    private fun jumpMain() {
+        ArouterUtils.unInterceptorClose(this, RouterUrl.User.LOGIN)
+    }
+
+
+    private val countDownTimer = object : CountDownTimer(3000, 1000) {
+        override fun onTick(millisUntilFinished: Long) {
+            val value = ((millisUntilFinished / 1000) + 1).toInt().toString()
+            tvSkip.text = value.plus(resources.getString(R.string.s_skip))
         }
-        return super.onKeyDown(keyCode, event)
+
+        override fun onFinish() {
+            jumpMain()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        countDownTimer.cancel()
     }
 }

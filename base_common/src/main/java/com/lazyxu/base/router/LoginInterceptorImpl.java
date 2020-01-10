@@ -9,7 +9,7 @@ import com.alibaba.android.arouter.facade.callback.InterceptorCallback;
 import com.alibaba.android.arouter.facade.template.IInterceptor;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.lazyxu.base.utils.Constants;
-import com.lazyxu.base.utils.SpUtil;
+import com.lazyxu.base.utils.SpUtilDelete;
 import com.orhanobut.logger.Logger;
 
 /**
@@ -19,11 +19,11 @@ import com.orhanobut.logger.Logger;
 public class LoginInterceptorImpl implements IInterceptor {
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
-        boolean isLogin = SpUtil.getBoolean(Constants.SP_IS_LOGIN);
+        boolean isLogin = SpUtilDelete.getBoolean(Constants.SP_IS_LOGIN);
         if (!isLogin) {
             String path = postcard.getPath();
             Bundle bundle = postcard.getExtras();
-            ARouter.getInstance().build(RouterUrl.LOGIN).with(bundle).withString(RouterUrl.PATH, path).greenChannel().navigation();
+            ARouter.getInstance().build(RouterUrl.User.LOGIN).with(bundle).withString(RouterUrl.PATH, path).greenChannel().navigation();
         } else {
             callback.onContinue(postcard);
         }

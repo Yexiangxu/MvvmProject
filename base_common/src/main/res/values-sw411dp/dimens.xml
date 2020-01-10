@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<dimen name="et_height">52.5167dp</dimen>
+	<dimen name="movie_detail_width">142.7083dp</dimen>
+	<dimen name="movie_detail_height">188.3750dp</dimen>
+	<dimen name="etlogin_height">51.3750dp</dimen>
+	<dimen name="toolbar_height">57.0833dp</dimen>
+	<dimen name="dp2">2.2833dp</dimen>
+	<dimen name="dp10">11.4167dp</dimen>
+	<dimen name="dp16">18.2667dp</dimen>
+	<dimen name="dp20">22.8333dp</dimen>
+	<dimen name="dp24">27.4000dp</dimen>
+	<dimen name="dp48">54.8000dp</dimen>
+	<dimen name="dp170">194.0833dp</dimen>
+	<dimen name="nav_left_margin">18.2667dp</dimen>
+	<dimen name="activity_vertical_margin">18.2667dp</dimen>
+	<dimen name="dp60">68.5000dp</dimen>
+	<dimen name="sp15">17.1250sp</dimen>
+	<dimen name="sp18">20.5500sp</dimen>
+</resources>

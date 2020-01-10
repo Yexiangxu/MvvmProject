@@ -21,21 +21,20 @@ import javax.inject.Inject
  */
 @Route(path = RouterUrl.HOTFILM)
 class HotFilmActivity : AppCompatActivity() {
-    @Inject
-    lateinit var mineUseCase: FilmUseCase
-    lateinit var mDatabinding: ActivityHotfilmBinding
+//    @Inject
+//    lateinit var mineUseCase: FilmUseCase
+//    lateinit var mDatabinding: ActivityHotfilmBinding
 
     @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
-        AndroidInjection.inject(this@HotFilmActivity)
         super.onCreate(savedInstanceState)
-        mDatabinding = DataBindingUtil.setContentView(this, R.layout.activity_hotfilm)
-        mineUseCase.hotFilm().subscribe({ mtimeFilmeEntity ->
-            mDatabinding.rvHotfilm.layoutManager = LinearLayoutManager(this@HotFilmActivity)
-            mDatabinding.rvHotfilm.adapter = HotFilmAdapter(R.layout.item_hotfilm, mtimeFilmeEntity.ms)
-        }, { throwable ->
-
-        })
+//        mDatabinding = DataBindingUtil.setContentView(this, R.layout.activity_hotfilm)
+//        mineUseCase.hotFilm().subscribe({ mtimeFilmeEntity ->
+//            mDatabinding.rvHotfilm.layoutManager = LinearLayoutManager(this@HotFilmActivity)
+//            mDatabinding.rvHotfilm.adapter = HotFilmAdapter(R.layout.item_hotfilm, mtimeFilmeEntity.ms)
+//        }, { throwable ->
+//
+//        })
     }
 
 }

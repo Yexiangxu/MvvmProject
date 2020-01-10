@@ -1,7 +1,8 @@
 说明：本项目只是个人基于“云阅”练习项目
 所有项目必须
 
-1. **androidX配置**(`Refactor -> Migrate to AndroidX` 一键迁移)
+1. **androidX**
+2. **使用 calligraphy 设置字体**
 2. **使用今日头条屏幕适配方案**
 3. **使用 [ImmersionBar](https://www.jianshu.com/p/2a884e211a62) 处理 StatusBar**（可处理导航栏、电池栏、电池栏文字颜色、全面屏、刘海屏）
    >注意`AndroidManifest.xml`中需要先添加下面配置
@@ -27,15 +28,10 @@
 
 
 
-#### kotlin配置
 
 
 
 
 
-####kotlin注意事项
 了解viewmodel原理结合people_mvvm
 
-                       
-
-****

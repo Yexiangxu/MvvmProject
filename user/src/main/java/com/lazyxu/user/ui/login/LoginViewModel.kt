@@ -1,14 +1,16 @@
 package com.lazyxu.user.ui.login
 
-import android.app.Application
-import android.text.TextUtils
-import android.util.Log
 import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
-import com.lazyxu.base.base.BaseViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.lazyxu.base.data.RespondResult
 import com.lazyxu.base.utils.AppToast
-import com.lazyxu.user.data.UserUseCase
-import javax.inject.Inject
+import com.lazyxu.user.data.entity.db.User
+import com.lazyxu.user.data.repository.LoginRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * User: Lazy_xu
@@ -17,45 +19,59 @@ import javax.inject.Inject
  * FIXME
  */
 
-class LoginViewModel
-@Inject
-constructor(application: Application, private val userUseCase: UserUseCase) : BaseViewModel(application) {
+class LoginViewModel(val loginRepository: LoginRepository) : ViewModel() {
     var userPhone = ObservableField<String>()
     var userPassword = ObservableField<String>()
-    private val loginData = MutableLiveData<Boolean>()
-    fun login(): MutableLiveData<Boolean> {
-        if (!judgeLogin()) {
-            loginData.value = false
-            return loginData
-        } else {
-            addSubscribe(userUseCase.login(userPhone.get()!!, userPassword.get()!!).subscribe({ loginBean ->
+    val loginUiState = MutableLiveData<LoginUiState>()
 
-                //                userUseCase.queryUser().subscribe({ user ->
-//                    if (user == null ) {
-//                        Log.i("LoginViewModel", "user=${user.toString()}")
-//                    } else {
-//                        Log.i("LoginViewModel", "user=$user")
-//                    }
-//                })
-//                userUseCase.insertUser(loginBean.loginData)
-                loginData.value = true
-            }, { throwable ->
-                Log.i("LoginViewModel", "throwable=$throwable")
-                loginData.value = false
-            }))
+    fun login() {
+        viewModelScope.launch(Dispatchers.Main) {
+            if (userPhone.get().isNullOrEmpty()) {
+                AppToast.show("请输入用户名")
+                return@launch
+            }
+            if (userPassword.get().isNullOrEmpty()) {
+                AppToast.show("请输入密码")
+                return@launch
+            }
+            emitUiState(showProgress = true)
+            val result = withContext(Dispatchers.IO) {
+                loginRepository.login(userPhone.get() ?: "", userPassword.get() ?: "")
+            }
+            checkResult(result,
+                    { emitUiState(showSuccess = it, enableLoginButton = true) },
+                    { emitUiState(showError = it, enableLoginButton = true) })
+
         }
-        return loginData
     }
 
-    private fun judgeLogin(): Boolean {
-        if (TextUtils.isEmpty(userPhone.get())) {
-            AppToast.show("请输入用户名")
-            return false
+    val verifyInput: (String) -> Unit = { loginEnableJudge() }
+    private fun loginEnableJudge() {
+        emitUiState(enableLoginButton = isInputValid(userPhone.get() ?: "", userPassword.get() ?: ""))
+    }
+    private fun isInputValid(userName: String, passWord: String) = userName.isNotBlank() && passWord.isNotBlank()
+    private inline fun <T : Any> checkResult(result: RespondResult<T>, success: (T) -> Unit, error: (String?) -> Unit) {
+        if (result is RespondResult.Success) {
+            success(result.data)
+        } else if (result is RespondResult.Error) {
+            error(result.exception.message)
         }
-        if (TextUtils.isEmpty(userPassword.get())) {
-            AppToast.show("请输入密码")
-            return false
-        }
-        return true
+    }
+
+    private fun emitUiState(
+            showProgress: Boolean = false,
+            showError: String? = null,
+            showSuccess: User? = null,
+            enableLoginButton: Boolean = false,
+            needLogin: Boolean = false
+    ) {
+        val uiModel = LoginUiState(showProgress, showError, showSuccess, enableLoginButton, needLogin)
+        loginUiState.value = uiModel
     }
 }
+
+data class LoginUiState(val showProgress: Boolean,
+                        val showError: String?,
+                        val showSuccess: User?,
+                        val enableLoginButton: Boolean,
+                        val needLogin: Boolean)

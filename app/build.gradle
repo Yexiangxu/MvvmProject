@@ -28,6 +28,9 @@ android {
 //        multiDexEnabled true
         testInstrumentationRunner "android.support.Config.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        ndk {
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
     }
     buildTypes {
         release {
@@ -88,6 +91,7 @@ android {
         wandoujia {
         }
     }
+    buildToolsVersion = buildToolsVersion
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }

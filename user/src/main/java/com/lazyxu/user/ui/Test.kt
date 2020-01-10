@@ -12,12 +12,12 @@ import io.reactivex.functions.Consumer
  * Description:
  * FIXME
  */
+
 object Test {
     fun test() {
-        Observable.just(true).subscribe({ aBoolean ->
-            Log.i("", "" + aBoolean!!)
-            Log.i("", "")
-        }, { })
+        listOf(1, 2, 3, 4, 5).forEach {
+            if (it == 3) return
+            print(it) // 12  没标签返回出main方法
+        }
     }
-
 }

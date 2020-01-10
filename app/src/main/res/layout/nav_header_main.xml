@@ -175,7 +175,7 @@
             <LinearLayout
                 android:id="@+id/llNavExit"
                 style="@style/llNavMain"
-                android:onClick="@{view::onClick}">
+                android:onClick="@{(v)->view.onClick(v)}">
 
                 <ImageView
                     style="@style/IvNavMain"

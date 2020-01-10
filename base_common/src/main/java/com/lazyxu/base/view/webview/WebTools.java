@@ -26,7 +26,7 @@ public class WebTools {
      */
     public static void copy(String content) {
         if (!TextUtils.isEmpty(content)) {
-            ClipboardManager clipboard = (ClipboardManager) BaseApplication.getInstance().getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipboardManager clipboard = (ClipboardManager) BaseApplication.INSTANCE.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText(content, content);
             clipboard.setPrimaryClip(clip);
         }
@@ -92,7 +92,7 @@ public class WebTools {
 //                        || backUrl.startsWith("openapp.jdmobile:")// 京东
 //                        || backUrl.startsWith("jdmobile:")//京东
 //                        || backUrl.startsWith("alipay:")// 支付宝
-//                        || backUrl.startsWith("alipays:")//支付宝
+//                        || backUrl.startsWith("alipays:")//支付宝  https://docs.open.alipay.com/203/107091/
                         || backUrl.startsWith("zhihu:")// 知乎
                         || backUrl.startsWith("vipshop:")//
                         || backUrl.startsWith("youku:")//优酷

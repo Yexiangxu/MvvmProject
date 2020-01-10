@@ -4,17 +4,13 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.lazyxu.base.base.BaseApplication;
-
 /**
  * 用于判断是不是联网状态
  */
 public class NetUtils {
-
-
-    public static boolean isNetworkConnected() {
+    public static boolean isNetworkConnected(Context context) {
         try {
-            ConnectivityManager cm = (ConnectivityManager) BaseApplication.getInstance().getSystemService(Context.CONNECTIVITY_SERVICE);
+            ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
             if (cm != null) {
                 NetworkInfo info = cm.getActiveNetworkInfo();
                 return info != null && info.isConnected();

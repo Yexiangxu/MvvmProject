@@ -11,9 +11,11 @@ import com.alibaba.android.arouter.launcher.ARouter
  * FIXME
  */
 object ArouterUtils {
-    fun unInterceptorClose(activity: Activity, url: String) {
-        ARouter.getInstance().build(url).greenChannel().navigation(activity)
-        activity.finish()
+    fun unInterceptorClose(activity: Activity, url: String?) {
+        with(activity) {
+            ARouter.getInstance().build(url).greenChannel().navigation()
+            this.finish()
+        }
     }
 
     fun interceptor(url: String) {
