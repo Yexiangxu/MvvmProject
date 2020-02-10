@@ -1,5 +1,7 @@
 package debug;
 
+import android.os.AsyncTask;
+
 import okhttp3.OkHttpClient;
 
 /**
@@ -9,5 +11,9 @@ import okhttp3.OkHttpClient;
  * FIXME
  */
 public class Test {
-    OkHttpClient.Builder builder=new OkHttpClient.Builder();
+    OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
+    private void test() {
+
+    }
 }

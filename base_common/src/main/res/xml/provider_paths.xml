@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--
+    <files-path>       getFilesDir()  /data/data//files目录
+    -->
+    <!--
+    apk安装
+    对应外部内存卡根目录：Environment.getExternalStorageDirectory()
+    路径：/storage/emulated/0
+    -->
+    <external-path
+        name="external_files"
+        path="." />
+    <!--相机相册裁剪
+     外部内存卡根目录下的APP公共目录，对应根目录等价于Context的getExternalFilesDir(String)
+     路径：/storage/emulated/0/Android/data/com.xxx.xxx
+     -->
+    <external-files-path
+        name="external_file_path"
+        path="." />
+    <!--指定文件存储的区块和区块的相对路径-->
+    <files-path
+        name="files_path"
+        path="Android/data/com.ijuyin.prints.news/" />
+</paths>

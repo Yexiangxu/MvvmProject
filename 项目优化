@@ -1,5 +1,13 @@
 #### 功能 
 1. 倒计时
+2. 适配
+消息推送（状态栏适配）
+拍照，apk安装（android 7.0适配）
+3.版本更新
+断点下载，下载到本地过不重复下载，安装适配
+使用IntentService实现下载，使用广播判断网络是否连接 网络连接自动继续下载
+
+
 
 #### 1. 使用系统流行控件
 侧滑：DrawerLayout+NavigationView
@@ -18,7 +26,8 @@ livadata使用
 1. 用今日头条屏幕适配
 2. 个人中心添加缓存，清除缓存
 1. HttpModule中用TLS替换ssl
-2. 版本更新下载功能，使用IntentService实现下载，使用广播判断网络是否连接 网络连接自动继续下载
+
+
 
 https://blog.csdn.net/codeyanbao/article/details/81813501
 3. 转场动画
@@ -27,7 +36,6 @@ https://blog.csdn.net/codeyanbao/article/details/81813501
 5. 通知栏播放下一曲等功能用前台服务
 6. 使用夜间模式切换
 7. 使用矢量图动画实现分享功能
-8. 版本更新使用断点下载
 9. 流行控件
 
 a. snackbar、TabLayout、FloatActionBar、NavigationView、AppBarLayout、
