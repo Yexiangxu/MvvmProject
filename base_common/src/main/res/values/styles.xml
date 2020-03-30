@@ -48,9 +48,9 @@
     </style>
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
-        <item name="actionMenuTextColor">@color/colorAccent</item> <!--  menu颜色-->
-        <item name="android:textSize">16sp</item> <!--  menu字体大小-->
-        <item name="android:textColor">@color/colorAccent</item> <!--  menu字体大小-->
+        <item name="actionMenuTextColor">@color/default_title</item> <!--  menu颜色-->
+        <item name="android:textSize">@dimen/titlesize</item> <!--  menu字体大小-->
+        <item name="android:textColor">@color/black_ff030303</item> <!--  menu字体大小-->
     </style>
 
     <style name="TvCenterStyle">
@@ -96,6 +96,56 @@
     <!--titlebar 标题-->
     <style name="ToolBar.Title" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">17sp</item>
-        <item name="android:textColor"></item>
+        <item name="android:textColor">@color/colorAccent</item>
     </style>
+
+    <!--登陆注册 大标题 公共样式-->
+    <style name="LoginTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp24</item>
+        <item name="android:textColor">@color/color_3d3d3b</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--登陆注册 小字 公共样式-->
+    <style name="LoginMsg">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp12</item>
+        <item name="android:textColor">@color/gray_ff4c5770</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--Button 公共样式-->
+    <style name="BtnMain" parent="@style/Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp46</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp14</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_main</item>
+        <item name="android:layout_marginStart">@dimen/dp26</item>
+        <item name="android:layout_marginEnd">@dimen/dp26</item>
+    </style>
+
+    <style name="LoginEtHint">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp13</item>
+        <item name="android:textColorHint">@color/gray_a1a9b0</item>
+        <item name="android:textColor">@color/gray_ff4c5770</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="sp14">14sp</dimen>
+    <dimen name="sp13">13sp</dimen>
+    <color name="gray_ff4c5770">#ff4c5770</color>
+    <color name="gray_a1a9b0">#a1a9b0</color>
+    <color name="black_ff030303">#ff030303</color>
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="view"
+            type="com.lazyxu.user.ui.loginorregister.LoginOrRegisterActivity" />
+        <variable
+            name="viewModel"
+            type="com.lazyxu.user.ui.loginorregister.LoginOrRegisterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_toolbar_center" />
+
+        <TextView
+            style="@style/LoginTitle"
+            android:layout_marginStart="@dimen/dp26"
+            android:layout_marginTop="@dimen/dp39"
+            android:text="@string/login_or_register" />
+
+        <TextView
+            style="@style/LoginMsg"
+            android:layout_marginStart="@dimen/dp26"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/login_or_register_init" />
+
+        <com.lazyxu.base.view.PhoneEditText
+            android:id="@+id/etUserPhone"
+            style="@style/LoginEtHint"
+            android:layout_marginLeft="@dimen/dp26"
+            android:layout_marginTop="@dimen/dp106"
+            android:layout_marginRight="@dimen/dp26"
+            android:gravity="start|center_vertical"
+
+            android:text="@={viewModel.userPhone}"
+            binding:afterTextChanged="@{viewModel.verifyInput}"
+            android:hint="@string/pls_input_phone"
+            android:inputType="phone"
+            android:textSize="@dimen/sp18" />
+
+        <View
+            android:id="@+id/confirm_load_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp26"
+            android:layout_marginTop="@dimen/dp19"
+            android:layout_marginRight="@dimen/dp26"
+            android:background="@color/gray_E2E2E2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNextStep"
+            style="@style/BtnMain"
+            android:layout_marginTop="@dimen/dp38"
+            android:enabled="@{viewModel.loginUiState.enableLoginButton}"
+            android:onClick="@{()->viewModel.login()}"
+            android:text="@string/next_step"
+            tools:enabled="false"
+            android:textSize="@dimen/sp15" />
+
+
+    </LinearLayout>
+</layout>

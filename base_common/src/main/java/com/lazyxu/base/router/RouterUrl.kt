@@ -6,8 +6,11 @@ package com.lazyxu.base.router
  * Description: 不同的module需要用不同的group（eg：不同的module用相同的group跳转失败）
  * FIXME
  */
-  object RouterUrl {
-     const val PATH = "path"
+object RouterUrl {
+    const val PATH = "path"
+
+
+    const val USERBASE = "/user/"
     /**
      * app
      */
@@ -19,11 +22,14 @@ package com.lazyxu.base.router
 
     class User {
         companion object {
-            const val LOGIN = "/user/login"
-            const val SETTING = "/user/setting"
-            const val ABOUTUS = "/user/aboutus"
+            const val LOGINORREGISTER = USERBASE + "loginorregister"
+
+            const val LOGIN = USERBASE + "login"
+            const val SETTING = USERBASE + "setting"
+            const val ABOUTUS = USERBASE + "aboutus"
         }
     }
+
     class Main {
         companion object {
             const val MAIN = "/app/main"

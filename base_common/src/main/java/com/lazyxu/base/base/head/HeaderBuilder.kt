@@ -1,18 +1,42 @@
 package com.lazyxu.base.base.head
 
+import androidx.annotation.IdRes
+import androidx.annotation.LayoutRes
+
 class HeaderBuilder : IHeaderBuilder {
     private val headToolbar = HeadToolbar()
 
 
-    override fun layoutId(layoutId: Int): HeaderBuilder {
+    override fun layoutId(@LayoutRes layoutId: Int): HeaderBuilder {
         headToolbar.layoutId = layoutId
         return this
     }
 
-    override fun titleBar(titleBar: Int): HeaderBuilder {
-        headToolbar.titleBar = titleBar
+    override fun toolBarRes(@IdRes toolBar: Int): HeaderBuilder {
+        headToolbar.toolBar = toolBar
         return this
     }
+    override fun backDrawable(backDrawable: Int): HeaderBuilder {
+        headToolbar.backDrawable = backDrawable
+        return this
+    }
+
+
+    override fun toolbarTitle(toolbarTitle: Any): HeaderBuilder {
+        headToolbar.toolbarTitle = toolbarTitle
+        return this
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 
     override fun menuId(menuId: Int): HeaderBuilder {
@@ -20,10 +44,7 @@ class HeaderBuilder : IHeaderBuilder {
         return this
     }
 
-    override fun toolbarTitle(toolbarTitle: Int): HeaderBuilder {
-        headToolbar.toolbarTitle = toolbarTitle
-        return this
-    }
+
 
     override fun toolbarTitleSize(textSize: Int): HeaderBuilder {
         headToolbar.setToolbarTitleSize(textSize)
@@ -40,10 +61,7 @@ class HeaderBuilder : IHeaderBuilder {
         return this
     }
 
-    override fun backDrawable(backDrawable: Int): HeaderBuilder {
-        headToolbar.backDrawable = backDrawable
-        return this
-    }
+
 
     override fun loadingTargetView(loadingTargetView: Int): HeaderBuilder {
         headToolbar.setLoadingTargetView(loadingTargetView)

@@ -5,7 +5,7 @@
     <data>
         <variable
             name="filmItemEntity"
-            type="com.lazyxu.film.data.entity.FilmItemEntity" />
+            type="com.lazyxu.film.model.entity.FilmItemEntity" />
     </data>
 
     <RelativeLayout

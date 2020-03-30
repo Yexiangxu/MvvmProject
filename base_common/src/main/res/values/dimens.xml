@@ -23,4 +23,21 @@
     <dimen name="sp15">15sp</dimen>
     <dimen name="sp18">18sp</dimen>
 
+
+
+
+
+    <dimen name="titlesize">18sp</dimen>
+    <dimen name="sp24">24sp</dimen>
+    <dimen name="dp26">26dp</dimen>
+    <dimen name="dp39">39dp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp19">19dp</dimen>
+    <dimen name="dp46">46dp</dimen>
+    <dimen name="dp38">38dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp106">106dp</dimen>
+
+
 </resources>

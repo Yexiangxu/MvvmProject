@@ -87,7 +87,7 @@ open class MainActivity : AppCompatActivity() {
                 drawerLayout.openDrawer(GravityCompat.START)
             }
             tvUserName -> {
-                ARouter.getInstance().build(RouterUrl.User.LOGIN).navigation()
+                ARouter.getInstance().build(RouterUrl.User.ABOUTUS).navigation()
             }
             llSetting -> {
                 ARouter.getInstance().build(RouterUrl.User.SETTING).navigation(this)

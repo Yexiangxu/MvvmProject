@@ -33,7 +33,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun jumpMain() {
-        ArouterUtils.unInterceptorClose(this, RouterUrl.User.LOGIN)
+        ArouterUtils.unInterceptorClose(this, RouterUrl.User.LOGINORREGISTER)
     }
 
 
@@ -44,7 +44,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         override fun onFinish() {
-            jumpMain()
+//            jumpMain()
         }
     }
 

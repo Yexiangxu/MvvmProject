@@ -99,7 +99,7 @@ public class WebViewActivity extends AppCompatActivity implements IWebView {
                 String host = data.getHost();
                 String path = data.getPath();
                 String text = "Scheme: " + scheme + "\n" + "host: " + host + "\n" + "path: " + path;
-                Log.e("data", text);
+                Log.e("model", text);
                 String url = scheme + "://" + host + path;
                 webView.loadUrl(url);
             } catch (Exception e) {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MVVM Demo</string>
+    <string name="app_name">麦子租赁</string>
     <string name="s_skip">S跳过</string>
 
 
@@ -15,4 +15,554 @@
     <string name="about_me">关于我</string>
     <string name="update_log">更新日志</string>
     <string name="menu_search">搜索</string>
+
+
+    <string name="home_page">首页</string>
+    <string name="fill_new">备案信息</string>
+    <string name="exposure_new">信息披露</string>
+    <string name="bid_recommend">产品推荐</string>
+    <string name="see_more">查看更多</string>
+    <string name="safe_operation">安全运营</string>
+    <string name="platform_safe_operation">平台安全运营</string>
+    <string name="year">年</string>
+    <string name="day">天</string>
+    <string name="capital_epository">资金由宜宾市商业银行存管</string>
+    <string name="turnover_amount">累计成交金额</string>
+    <string name="user_earn">已成功为用户赚取</string>
+    <string name="turnover_amount_unit">亿</string>
+    <string name="user_earn_amount_unit">万</string>
+    <string name="mmt">麦子租赁</string>
+    <string name="load_area">产品</string>
+    <string name="project_term">项目期限</string>
+    <string name="load_type">还款方式</string>
+    <string name="bid_type">标的类型</string>
+    <string name="delete_btn">清空</string>
+    <string name="check_btn">确定</string>
+    <string name="value_date_time">起息时间</string>
+    <string name="raise_success">募集成功T+0自然日</string>
+    <string name="load_of_month">按月还款 等额本息</string>
+    <string name="start_throw_amonut">起投金额</string>
+    <string name="ten_yuan">10元</string>
+    <string name="bank_depository">银行存管</string>
+    <string name="zhe_shang_bank">宜宾市商业银行存管</string>
+    <string name="income_calculation">收益计算</string>
+    <string name="load_amount">租赁份数</string>
+    <string name="expect_profit">预计收益 (元)</string>
+    <string name="expect_maili">预计麦粒 (个)</string>
+    <string name="load_now">申请租赁</string>
+    <string name="loading_more">向上滑动查看更多</string>
+    <string name="load_project">向平台租赁目标物\n并一次性交付租金</string>
+    <string name="successful_loan">委托平台将委托租赁物\n出租给承租人(机构)</string>
+    <string name="repayment_day">委托平台替客户\n向承租人收取租金</string>
+    <string name="frozen_money">冻结资金</string>
+    <string name="frozen_money_into_bank">资金冻结打入借款人银行卡</string>
+    <string name="return_account">返回存管账户</string>
+    <string name="project_describe">租赁信息</string>
+    <string name="authentication_data">认证资料</string>
+    <string name="load_record">委托租赁记录</string>
+    <string name="common_problem">常见问题</string>
+    <string name="whole_pass">全部通过</string>
+    <string name="see_whole">查看全部</string>
+    <string name="recommend_index">推荐指数</string>
+    <string name="load_person_news">借款人信息</string>
+    <string name="nick_name">昵称：</string>
+    <string name="credit_rating">信用评级：</string>
+    <string name="user_name">姓名：</string>
+    <string name="id_card">身份证号：</string>
+    <string name="credit_news">信用信息</string>
+    <string name="success_time">成功借款次数：</string>
+    <string name="normal_time">正常还款次数：</string>
+    <string name="overdue_time">逾期还款次数：</string>
+    <string name="invest_time">投资投标笔数：</string>
+    <string name="load_describe">项目介绍</string>
+    <string name="cbo_examine">风控审核</string>
+    <string name="unexpired_proiect_news">已撮合未到期项目有关信息</string>
+    <string name="capital_operate_situation">借款资金运营情况:</string>
+    <string name="capital_normal_operate">资金运营正常</string>
+    <string name="borrower_financial_situation">借款人经营状况及财务状况:</string>
+    <string name="normal">正常</string>
+    <string name="borrower_repayment_ability">借款人还款能力变化情况:</string>
+    <string name="borrower_administrative_sanction">借款人受行政处罚情况等:</string>
+    <string name="nothing">无</string>
+    <string name="borrower_overdue_situation">借款人逾期情况:</string>
+    <string name="not_overdue">未逾期</string>
+    <string name="no_litigation">无涉诉</string>
+    <string name="borrower_litigation_situation">借款人涉诉情况:</string>
+    <string name="project_remarks">注：项目信息按月披露，每月5日前更新</string>
+
+
+    <string name="my_have_bottom">我是有底线的～</string>
+    <string name="comfirm_loan">确认订单</string>
+    <string name="loan_result">支付结果</string>
+    <string name="input_code">输入验证码</string>
+    <string name="my_red_envelope">我的红包</string>
+    <string name="login_or_register">您好，请登录/注册</string>
+    <string name="login_or_register_init">我们会向未注册用户发送短信验证码</string>
+    <string name="pls_input_phone">请输入您的手机号码</string>
+    <string name="ple_input_password">请输入登录密码</string>
+    <string name="next_step">下一步</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="switch_account">切换账户</string>
+    <string name="phone_hint">您的手机号：</string>
+    <string name="set_password">设置密码</string>
+    <string name="set_login_password">设置登录密码</string>
+    <string name="finish_register">完成注册</string>
+    <string name="promoter_phone">推广人手机号</string>
+    <string name="input_verification_code">输入验证码</string>
+    <string name="verification_code_send_finish">验证码已通过短信发送到您的手机：</string>
+    <string name="verification_phone">验证手机号码</string>
+    <string name="obtain_verification">获取验证码</string>
+    <string name="ple_input_verification">请输入验证码</string>
+    <string name="input_new_password">输入新密码</string>
+    <string name="input_new_password_again">再次输入新密码</string>
+    <string name="check_commit">确认提交</string>
+    <string name="input_old_password">输入原密码</string>
+    <string name="verification_old_phone">验证原手机号码</string>
+    <string name="ple_input_new_phone">输入新的手机号码</string>
+    <string name="forget_gesture_password">忘记手势密码？</string>
+    <string name="open_zheshang_hint">仅支持绑定本人名下的一张储蓄卡</string>
+    <string name="real_name">真实姓名</string>
+    <string name="input_name">输入姓名</string>
+    <string name="id_card_number">身份证号</string>
+    <string name="input_id_card_number">输入身份证号</string>
+    <string name="bank_card_number">银行卡号</string>
+    <string name="input_bank_card_number">输入银行卡号</string>
+    <string name="ple_input_bank_news">请输入您的银行卡信息</string>
+    <string name="check_bank">查看支持银行</string>
+    <string name="reserved_phone">预留手机号</string>
+    <string name="ple_input_reserved_phone">请输入银行预留手机号</string>
+    <string name="now_open">立即开通</string>
+    <string name="open_fail">开户失败</string>
+    <string name="open_again">重新开户</string>
+    <string name="mmt_financial">麦子租赁</string>
+    <string name="new_version_online">新版上线，全新体验</string>
+    <string name="new_version_online_big">新版上线</string>
+    <string name="now_update">立即更新</string>
+    <string name="now_risk">立即测评</string>
+    <string name="login_or_register_title">注册/登录</string>
+    <string name="input_password">输入密码</string>
+    <string name="password_format_error">密码只能为字母、数字或英文字符</string>
+    <string name="register_passwordRule">密码至少为6位数</string>
+    <string name="password_no_null">请输入密码</string>
+    <string name="confirm_password_same">请确认密码是否一致</string>
+    <string name="forget_password_title">忘记密码</string>
+    <string name="register">注册</string>
+    <string name="total_assets">总资产 (元)</string>
+    <string name="grand_total">累计收益 (元)</string>
+    <string name="pending_total">待收本息 (元)</string>
+    <string name="account_balance">账户余额</string>
+    <string name="my_loan">我的出借</string>
+    <string name="my_rent">我的租赁</string>
+    <string name="payback">回款计划</string>
+    <string name="my_red_pack">我的红包</string>
+    <string name="transaction_record">交易记录</string>
+    <string name="risk_test">风险测评</string>
+    <string name="help_center">帮助中心</string>
+    <string name="invite_friend">邀请好友</string>
+    <string name="all_assets_details">总资产</string>
+    <string name="yuan">元</string>
+    <string name="pending_total_no_yuan">待收本息</string>
+    <string name="freeze_total">待放款在途资金</string>
+    <string name="today_pending">今日待收</string>
+    <string name="today_received">今日已收</string>
+    <string name="month_pending">本月待收</string>
+    <string name="month_received">本月已收</string>
+    <string name="assets_details">资产详情</string>
+    <string name="transaction_time">交易时间</string>
+    <string name="transaction_type">交易类型</string>
+    <string-array name="time_list">
+        <item>全部</item>
+        <item>0–3个月</item>
+        <item>3–6个月</item>
+        <item>6–9个月</item>
+        <item>9–12个月</item>
+        <item>12个月以上</item>
+    </string-array>
+
+    <string-array name="repayment_way_list">
+        <item>全部</item>
+        <item>按月付息 到期还本</item>
+        <item>按月还款 等额本息</item>
+        <item>一次性还款</item>
+        <item>等额分期</item>
+    </string-array>
+
+    <string-array name="type_list">
+        <item>全部</item>
+        <item>存管充值</item>
+        <item>存管提现</item>
+        <item>投资</item>
+        <item>收款记录</item>
+        <item>分账记录</item>
+        <item>红包记录</item>
+    </string-array>
+
+    <string name="recharge_amount">充值金额(元)</string>
+    <string name="account_amount">账户余额(元)</string>
+    <string name="withdraw_amount">可提现余额(元)</string>
+    <string name="confirm_recharge">确认充值</string>
+    <string name="withdraw">提现金额(元)</string>
+    <string name="zhe_shang_account_recharge">充值须知：</string>
+
+    <string-array name="online_recharge_list">
+        <item>1、充值全程免费，不收取任何手续费。</item>
+        <item>2、充值必须为银行借记卡，不支持存折，信用卡充值。</item>
+        <item>3、严禁使用充值功能进行信用卡套现、转账、洗钱等行为，一经发现，将封停账号。</item>
+        <item>4、如遇问题可拨打400 666 8790客服电话。</item>
+    </string-array>
+
+    <string name="transfer_recharge_prompt">请使用您在麦麦提平台开通存管账户的银行卡，通过网上银行、手机银行或银行柜台的方式将资金转账到您的存管账户下(不支持支付宝等第三方渠道)</string>
+
+    <string-array name="transfer_recharge_list">
+        <item>1. 请使用您在麦麦提平台开通银行存管账户绑定的银行卡，通过网上银行、手机银行、或银行柜台的方式将资金转账到您的存管账户下，不支持支付宝等第三方渠道。</item>
+        <item>2. 转账充值无额度限制。</item>
+        <item>3. 若使用非麦麦提平台开户银行卡将会提示转账失败。</item>
+        <item>4. 充值转账功能不支持支付宝、微信、ATM机、存折、他人现金转账到存管账户。</item>
+        <item>5. 充值过程麦麦提不收取任何其他手续费。</item>
+        <item>6. 严禁利用此充值功能进行任何非法洗钱等行为，一经发现，将封停账号30天</item>
+    </string-array>
+
+    <string name="zhe_shang_bank_news">您的银行存管账户信息</string>
+    <string name="payee_name">收款人姓名</string>
+    <string name="payee_account">收款账户账号</string>
+
+    <string name="online_recharge">充值</string>
+    <string name="transfer_recharge">转账充值</string>
+
+    <string name="withdraw_hint">温馨提示：提现预计申请日当日到账。工作日16:00之后、双休日及法定节假日全日，提现单笔限额5万元，不限笔数</string>
+
+    <string-array name="withdraw_recharge_list">
+        <item>1. 每次提现最低金额为1元。</item>
+        <item>2. 若提现失败，请及时致电客服（400–666–8790），我们的客服人员会尽快为您处理。</item>
+        <item>3. 提现后2~3小时内到账，具体以实际到账时间为准。</item>
+        <item>4. 当您的提现操作出现人为异常时（包括但不限于涉嫌非法套 现等违法行为），麦麦提将视具体情况提高您的审核级别（ 包括但不限于要求提供证明、延长审核时间等），我们将最 大限度保证您的资金安全。</item>
+        <item>5. 平台禁止洗钱、信用卡套现、虚假交易等行为，一经发现并 确认，将终止该账户的使用。 </item>
+    </string-array>
+
+    <string name="zhe_shang_account_withdraw">存管账户提现须知：</string>
+    <string name="apply_for_withdrawal">申请提现</string>
+    <string name="withdrawal">提现</string>
+    <string name="withdrawal_notice">提现须知</string>
+
+    <string-array name="lengding_list">
+        <item>筹款中</item>
+        <item>回款中</item>
+        <item>已结束</item>
+    </string-array>
+
+    <string-array name="renting_list">
+        <item>委托中</item>
+        <item>转租中</item>
+        <item>已结束</item>
+    </string-array>
+
+    <string name="no_more_data">没有更多数据了</string>
+    <string name="no_more_envelope">已无更多可用红包</string>
+    <string name="see_use">查看已使用</string>
+    <string name="expired">已过期</string>
+    <string name="touch_use">点击使用</string>
+
+    <string-array name="envelope_list">
+        <item>已使用</item>
+        <item>已过期</item>
+    </string-array>
+
+    <string name="zhe_shang_hint">温馨提示：更换存管账户预留手机号之前，请确认您已经到开户银行修改了您的预留手机，否则您将无法收到短信。 </string>
+    <string name="safe_exit">安全退出</string>
+    <string name="account_security">账户安全</string>
+    <string name="real_verified">实名认证</string>
+    <string name="modify_zhe_shang_phone">修改手机号码</string>
+    <string name="transfer_to_labor">转人工</string>
+    <string name="modify_login_phone">修改登录手机号码</string>
+    <string name="modify_login_password">修改登录密码</string>
+    <string name="modify_password">修改密码</string>
+    <string name="binding_new_phone">绑定新手机号码</string>
+    <string name="calendar">日历</string>
+    <string name="maturity_time">到期时间：</string>
+    <string name="payback_status">账单状态：</string>
+
+    <string-array name="pending_payment_list">
+        <item>全部</item>
+        <item>今天</item>
+        <item>未来一个月</item>
+        <item>未来三个月</item>
+        <item>未来一年</item>
+    </string-array>
+
+    <string-array name="already_payback_list">
+        <item>全部</item>
+        <item>今天</item>
+        <item>近一个月</item>
+        <item>近三个月</item>
+        <item>近一年</item>
+    </string-array>
+
+    <string-array name="payback_status_list">
+        <item>待收回</item>
+        <item>已收回</item>
+    </string-array>
+    <string name="pending_payback">回款计划</string>
+    <string name="payback_calendar">回款日历</string>
+    <string name="list">列表</string>
+
+    <string-array name="chinese_week_string_array">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+    <string name="current_month_pending_interest">本月待收本息</string>
+    <string name="current_month_received_interest">本月已收本息</string>
+    <string name="current_day_pending_interest">今日待收本息</string>
+    <string name="current_day_received_interest">今日已收本息</string>
+    <string name="interest">利息：</string>
+    <string name="principal">本金：</string>
+    <string name="neterror_tryagain">网络连接失败，请稍后再试！</string>
+    <string name="data_error">数据解析异常！</string>
+    <string name="open_zheshang">开通存管</string>
+    <string name="bank_card_is_not_supported">存管银行不支持该行，请更换银行卡</string>
+
+
+    <string-array name="load_page_project_term_list">
+        <item>null</item>
+        <item>1,2,3</item>
+        <item>4,5,6</item>
+        <item>7,8,9</item>
+        <item>10,11,12</item>
+        <item>12,13,14,15,16,17,18,19,20,21,22,23,24</item>
+    </string-array>
+
+    <string-array name="load_page_pay_type_list">
+        <item>null</item>
+        <item>2</item>
+        <item>1</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="loan_user_id">借款人手持身份证认证</string>
+    <string name="pls_input_code">请正确输入验证码</string>
+
+    <string name="take_photograph">拍照</string>
+    <string name="select_local">从相册中选取</string>
+    <string name="cancel">取消</string>
+    <string name="choose_phone">选择图片</string>
+    <string name="toast_un_image">选择的不是图片</string>
+    <string name="toast_no_album">寻寻觅觅，没有找到系统相册</string>
+    <string name="verify_serial_no">核对流水号</string>
+    <string name="success">成功</string>
+    <string name="message">消息</string>
+    <string name="all_read">全部已读</string>
+
+    <string-array name="message_list">
+        <item>公告</item>
+        <item>账户</item>
+    </string-array>
+    <string name="submit">提交</string>
+    <string name="skip">跳过</string>
+    <string name="risk_again">重新测评</string>
+    <string name="confirm">确定</string>
+    <string name="unlock_success">手势密码解锁成功</string>
+    <string name="pwderror_repeat">密码错误，还可以再输入</string>
+    <string name="count">次</string>
+    <!--主界面-->
+    <string name="back_again">再按一次退出程序</string>
+    <string name="gesture_more_error_title">错误次数超限</string>
+    <string name="gesture_more_error_msg">请重新登录</string>
+    <string name="gesture_forgetpwd_title">忘记手势密码，需重新登录</string>
+    <string name="title">标题</string>
+    <string name="my_friend">我的好友</string>
+    <string name="shared">分享</string>
+    <string name="input_shipping_name">输入收货人姓名</string>
+    <string name="input_shipping_phone">输入收货人手机号</string>
+    <string name="pls_select_province">请输入省市</string>
+    <string name="input_details_address">输入详细地址</string>
+    <string name="province">省</string>
+    <string name="city">市</string>
+
+    <string-array name="project_agreement_list">
+        <item>投资合同</item>
+        <item>居间服务协议</item>
+        <item>保障函</item>
+        <item>催收委托书</item>
+    </string-array>
+
+    <string-array name="rent_agreement_list">
+        <item>转租合同</item>
+        <item>租赁合同</item>
+        <item>租赁补充合同</item>
+    </string-array>
+
+    <string name="save">保存</string>
+    <string name="modify_shipping_address">添加收货地址</string>
+    <string name="revise_shipping_address">修改收货地址</string>
+    <string name="fee_scale">收费标准</string>
+
+    <string-array name="register_or_login_title_list">
+        <item>如何注册平台？</item>
+        <item>注册头像必须上传？</item>
+        <item>注册时，进行手机验证，收不到短信怎么办？</item>
+        <item>注册成功后，用户名可以修改吗？</item>
+        <item>我有推荐人，需要填写什么？</item>
+        <item>开通后可以不进行实名认证吗？</item>
+        <item>可以不开通存管账户吗？</item>
+    </string-array>
+
+    <string-array name="register_or_login_content_list">
+        <item>A,通过麦麦提官网注册；\n\nB,下载麦麦提手机APP注册；（ios用户可直接在APP store中搜索麦麦提下载，android用户可以在各大应用市场搜索麦麦提下载，也可以直接扫描下方二维码进行下载）；\n\nC,通过好友分享的邀请链接进行注册。</item>
+        <item>无需上传头像，系统默认为麦麦提吉祥物麦萌，没有上传头像不会影响您在麦麦提的信用评级以及借款出借。</item>
+        <item>A，请确认手机是否安装短信拦截或过滤软件；\n\nB，请确认手机是否能够正常接收短信（信号问题、欠费、停机等）；\n\nC，短信收发过程中可能会因为短信运营商问题存在延迟，请耐心等待，短信在120秒内有效；\n\nD，您还可以联系在线客服或拨打热线（ 400-666-1235）寻求帮助，小麦会尽快为您解决。</item>
+        <item>为了您的账户安全，用户名一旦注册成功不能进行修改。</item>
+        <item>如果您有推荐人，可选择：“我有推荐人”选项，填入您的推荐人手机号码。</item>
+        <item>新用户必须进行实名认证才可以在麦麦提平台上借款和出借。此外，麦麦提有完整的数据保密体系，您可以完全放心的进行实名认证。</item>
+        <item>为了更好的保障用户资金安全，必须开通存管账户，才可以在平台进行借款出借操作。</item>
+    </string-array>
+
+    <string-array name="recharge_title_list">
+        <item>平台都有哪些充值渠道？</item>
+        <item>如何开通网上银行？</item>
+        <item>充值和提现有没有限额？</item>
+        <item>充值没到帐怎么办？</item>
+        <item>提现以后多久可以到账？</item>
+        <item>提现银行卡信息填写错误怎么办？</item>
+    </string-array>
+
+    <string-array name="recharge_content_list">
+        <item>目前平台官方网站可采用快捷充值和网银充值等2种充值渠道；APP 用户只有快捷充值这一充值渠道。</item>
+        <item>目前所有商业银行都支持个人网银业务，您只需要携带有效身份证件，到开户行当地任意营业网点，即可申请开通网上银行业务；您还可以到商业银行官网查看个人网上银行详细信息。</item>
+        <item>提现没有限额；充值限额视不同银行卡发卡行限额而定，详情请咨询客服。</item>
+        <item>充值有时会延迟到账，请您耐心等待；若有其他疑问请联系在线客服。</item>
+        <item>宜宾存管账户提现即刻到账；麦子租赁账户申请提现后预计2到3小时之内到账；若有其他疑问，可拨打客服热线。</item>
+        <item>您可以联系在线客服或拨打热线( 400-666-1235)寻求帮助。</item>
+    </string-array>
+
+    <string-array name="invest_title_list">
+        <item>平台目前有哪些标？</item>
+        <item>平台官网标的的年利率是多少？</item>
+        <item>何时开始计算租金（收益）？</item>
+        <item>如何进行转租？</item>
+        <item>标的期限有多少？</item>
+    </string-array>
+
+    <string-array name="invest_content_list">
+        <item>平台目前以委托租赁形式开展的商品租赁收益产品为主，标的有一定份数的租赁物总价值购物，麦麦提出借人作为商品租赁业务的承租人与转租人，是先以承租人的身份通过平台以实物租赁的方式获得真实的租赁物品，再以转租人的身份通过委托租赁的方式合法合规的获得转租所产生的收益，是属于租赁收益型的产品。目前平台只设置了6个月以内的委托租赁产品。</item>
+        <item>转租期限以6个月为主，转租收益率为12%，按月回款。</item>
+        <item>一般在申请租赁成功后当天安排委托租赁，开始计算租金收益。</item>
+        <item>1、在麦麦提官网上点击注册、完成实名认证并绑定本人真实的银行卡账户；\n\n2、账户充值。\n\n3、选择“申请租赁”，确定需要购买租赁物的份数，确定后点击“申请租赁”，即完成转租成功。</item>
+        <item>目前平台上标的期限主要以6个月为主，您可以根据个人需求进行选择出租。</item>
+    </string-array>
+
+    <string-array name="loan_title_list">
+        <item>如何借款？</item>
+        <item>审核需要多少时间？</item>
+        <item>如果逾期还款，会如何处理？</item>
+        <item>严重逾期或联系不上者，会如何处理？</item>
+    </string-array>
+
+    <string-array name="loan_content_list">
+        <item>可在官网的最上方选择“优品商城”进行相关的分期购物需求。</item>
+        <item>审核期限一般为借款列表的进度达到100%后的三个工作日内；\n\n如周一满标，则审核期限是周二至周四；\n\n若周四满标，则审核期限是周五至下周二；\n\n特殊的情况，周末或节假日满标的视同最近的工作日当天满标的，再往后推3个工作日。 温馨提示：周六、周日和法定节假日不计入审核期限。</item>
+        <item>麦麦提金融会对借款人启用催收流程。</item>
+        <item>出借人可要求借款本息提前到期，借款人应立即清偿尚未偿付的全部本金、利息、罚息及产生的其他全部费用；麦麦提有权将该借款人的有关资料正式备案在“不良信用记录”，列入全国个人信用评级体系的黑名单（“不良信用记录”数据将为银行、电信、担保公司、人才中心等有关机构提供个人不良信用信息）此不良记录将保存5年；麦麦提有权将该借款人的有关信息向媒体、用人单位、公安机关、检察机关、法律机关披露，麦麦提并不因此承担任何责任；保留对借款人采取法律措施的权利，由此所产生的所有法律后果和费用（包括但不限于律师费）将由借款人来承担。。</item>
+        <item>目前平台上标的期限为30天—1年，您可根据您的需求进行选择。</item>
+    </string-array>
+
+    <string-array name="account_title_list">
+        <item>密码类别？</item>
+        <item>如何找回密码？</item>
+        <item>如何更换银行卡？</item>
+        <item>提现银行卡信息填写错误怎么办？</item>
+        <item>如果所填写的银行卡信息不正确，能否提现成功？</item>
+        <item>为什么会提现失败？</item>
+        <item>为何要进行实名认证？</item>
+        <item>多个账户可否绑定同一张身份证？</item>
+        <item>原来的手机号码接收不到短信了怎么办？</item>
+        <item>多个账号可否绑定同一个手机号？</item>
+    </string-array>
+
+    <string-array name="account_content_list">
+        <item>登录密码\n\n登录麦麦提时，需要输入的密码\n\n交易密码\n\n出借、修改提现银行卡信息、提现时需要输入的密码，与银行卡的密码无关。为了账户安全“登录密码”与“交易密码”需设置不同。</item>
+        <item>进入“账户中心”的“账户设置”；\n\n通过手机验证码的方式进行修改和找回登录密码和交易密码；\n\n温馨提示：如果无法找回，您可以联系在线客服或拨打热线（ 400-666-1235）寻求帮助。</item>
+        <item>可在【我的】界面点击【头像】-【麦子租赁账户】进行银行卡解绑或绑定银行卡操作。</item>
+        <item>进入“账户中心”，在“借款情况”中选择“银行卡管理”，点击“编辑”并填写相关信息即可。</item>
+        <item>1.如果您填写的银行卡号有误或该银行卡开户名不是您实名认证的姓名，不会审核通过，客服会联系您核对信息。\n\n2.如果您填写的银行开户行名称、开户支行名称等信息不正确，则该笔提现在提交后可能由于信息校验不正确而审核不通过，客服会联系您核对信息。</item>
+        <item>造成您取现失败的原因可能有以下几种：\n\n1，银行账号/户名错误，或是账号和户名不符；\n\n2，用户银行预留手机号变更；\n\n3，银行卡状态是否正常，有无注销停用状况；\n\n也可联系客服，客服将帮您查询提现失败原因后致电给您，告知原因，请您不必担心资金安全。</item>
+        <item>为了确保您的账户安全，实名认证需要提供年满16周岁真实有效的身份证件，以便于系统在您提现时校验身份</item>
+        <item>为了确保您的账户安全，麦麦提每个用户名只可绑定一个有效证件。</item>
+        <item>您可以联系在线客服或拨打热线（ 400-666-1235）寻求帮助。</item>
+        <item>为了您的账户安全，一个手机只能绑定一个麦麦提账户。</item>
+    </string-array>
+
+    <string-array name="depository_title_list">
+        <item>存管账户开通失败？</item>
+        <item>什么是资金存管？</item>
+        <item>实现资金存管对麦麦提出借用户有哪些好处及平台的变化是什么？</item>
+        <item>原来的手机号码接收不到短信了怎么办？</item>
+        <item>银行资金存管具备哪些特征？</item>
+        <item>用户之前在麦麦提绑定的银行卡是否可以继续使用？</item>
+        <item>银行为我开立的交易资金账户由谁操作，信息安全是否有保障？</item>
+        <item>在验证银行账户/重置密码时，手机收不到验证码怎么办？</item>
+    </string-array>
+
+    <string-array name="depository_content_list">
+        <item>1.银行卡信息是否填写正确；\n\n2.是否为您本人的银行卡；\n\n3.银行卡预留的手机号必须与您开通时填写的手机号一致；\n\n如若都不是以上三种情况，您可以联系在线客服或拨打热线（ 400-666-1235）寻求帮助。</item>
+        <item>根据《关于促进互联网金融健康发展的指导意见》“（十四）客户资金第三方存管制度。除另有规定外，从业机构应当选择符合条件的银行业金融机构作为资金存管机构，对客户资金进行管理和监督，实现客户资金与从业机构自身资金分账管理。”和《网络借贷信息中介机构业务活动管理暂行办法（征求意见稿）》第二十八条“网络借贷信息中介机构应当实行自身资金与出借人和借款人资金的隔离管理，选择符合条件的银行业金融机构作为出借人与借款人的资金存管机构。”和第三十六条“资金存管机构对出借人与借款人开立和使用资金管理账户进行管理和监督，并根据合同约定，依照出借人与借款人向网络借贷信息中介机构发出的指令，对出借人与借款人的资金进行存管、划付、核算和监督。”“资金存管”是指这样一种安排，即P2P平台在银行业金融机构单独设立独立账户，将客户资金存入该等独立账户，并由银行业金融机构根据出借人、借款人发出的指令和合同约定，对该等资金的使用、划付进行管理和监督。</item>
+        <item>首先，资金存管实现了P2P平台自有资金和用户资金的分离，避免P2P平台自有资金与用户资金发生混同，当P2P平台自身发生负债、破产时，用户资金不会受到P2P平台债权人的追索。其次，资金存管是由银行业金融机构根据出借人、借款人的指令和合同约定对用户资金的使用、划付进行管理、监督，且由银行对客户资金交易进行记录，能够尽可能地避免P2P平台非法动用出借人、借款人的资金，保障出借人、借款人的资金安全。\n\n资金存管上线后，麦麦提用户可以有选择性地在存管银行开通独立的个人存管账户。因此在用户出借前增加了在存管银行开户操作。在用户进行充值、出借、提现等涉及资金操作时，更好的实现了平台与出借人资金的分离。</item>
+        <item>若您更换了您的手机号码，可致电客服（ 400-666-1235）为您更换号码。。</item>
+        <item>关键点一：用户资金自交易之初就在银行体系内运转, 可实现平台自有资金与用户资金隔离，避免资金池。\n\n将用户资金与平台自有资金进行有效隔离，是平台实现银行资金存管的首要标志。存管银行开设专户用于存放麦麦提金融用户交易资金，从而实现存管账户内的用户资金与平台运营资金的隔离。用户的资金自交易之初就在银行体系内运转。这种隔离避免了平台自建资金池的可能性，消除了平台擅自挪用资金的隐患，从而在根源上保障了用户资金安全。\n\n关键点二：由银行对用户账户进行独立管理。\n\n麦麦提金融与银行合作的资金存管模式下，银行会对所有用户的交易与资金流水进行簿记，以此实现账户的独立管理，避免平台进行挪用。这改变了过往第三方支付以大账户的方式为平台存管资金和平台自行簿记的做法，使平台用户的资金交易全程都真实在银行端完成。\n\n同时，银行每日将与麦麦提金融就银行系统与平台的总账户，以及所有用户的分账户进行对账，确保数据安全准确。而用户也可在银行提供的界面查询资金余额、资产交易情况等数据，避免平台提供不实信息。\n\n关键点三：交易密码由银行管理，平台无法触碰 对用户自主意愿进行安全保障。\n\n在所有涉及资金流转例如充值、出借、提现等环节，麦麦提金融用户操作时都需输入交易密码，确保根据用户真实意愿进行交易。所有用户设置的交易密码由银行系统管理，平台无法触碰。这不仅有效确保每一笔交易的真实性，同时也防止平台在未经用户授权的情况下对用户资金进行违规操作</item>
+        <item>用户之前在麦麦提绑定的银行卡可以使继续使用。当存管上线后，麦麦提平台将分为两套账户体系：1.存管账户，2非存管账户。用户之前绑定的银行卡就是非存管账户。而存管账户需要重新进行绑定，并且可以与非存管账户使用同一张银行卡。</item>
+        <item>客户的交易结算资金管理账户由客户本人管理，充值、出借、提现时要由客户输入交易密码进行授权，平台或者银行都不能自行动用客户账户资金。请客户保护好自己的交易密码、手机验证码等信息，勿向他人泄露。</item>
+        <item>1.客户手机安装了拦截短信软件；\n\n2.客户打电话要求屏蔽存管银行的短信，致使其收不到。需客户电话95527 开启短信提醒服务；\n\n3.部分运营商短信存在到达率问题；</item>
+    </string-array>
+
+    <string-array name="other_title_list">
+        <item>等额本息</item>
+        <item>借款管理费</item>
+        <item>借款利率</item>
+        <item>预期利率</item>
+        <item>历史年化收益率</item>
+        <item>信用等级</item>
+    </string-array>
+
+    <string-array name="other_content_list">
+        <item>等额本息还款法是一种被广泛采用的还款方式。在还款期内，每月偿还同等数额的借款(包括本金和利息)。借款人每月还款额中的本金比重逐月递增、利息比重逐月递减。</item>
+        <item>平台每款产品借款管理费不同，根据产品标准及借款人综合情况，会收取相应的管理费</item>
+        <item>借款利率是指借款申请人为了获得借款而愿意支付给出借人的预期利率。请注意，在目前的等额本息、每月还款的还款方式下，用户实际支付的年利息低于借款本金x预期利率。</item>
+        <item>预期利率是把真实利率换算成以年为单位的利率。</item>
+        <item>指根据产品历史收益情况推算，出借人对应一年出借所获的收益率。</item>
+        <item>信用等级由信用分数转化而来，每个信用等级都对应的信用分数范围，信用分数和信用等级是借款人的信用属性，也是出借人判断借款人违约风险的重要依据之一。通常来讲借款人信用等级越高，其违约率越低，相应的借款成功率越高。</item>
+    </string-array>
+
+    <string name="member">铂金会员</string>
+    <string name="certification">实名认证</string>
+    <string name="mali_description">麦粒说明</string>
+
+    <string name="mali_description_details">麦粉可通过投资等一系列操作赚取麦粒\n积分规则（下称麦粒）：\nY 麦粒换算说明：\n实际项目天数/360* 实际投资金额*麦粒系数=获取麦粒数额 (备注：麦粒保留整数，计算不考虑四舍五入。)\n\n举例说明： 2000元投资12个月标的，用户等级为黄金，用户将获得2000麦粒，根据公式计算为 360/360*2000*1=2000（麦粒）\n\n2000元投资3个月标的，用户等级为钻石，用户将获得525麦粒，根据公式计算为 90/360*2000*1.05=525（麦粒）</string>
+    <string name="fail">失败</string>
+    <string name="open_bank_deposit">开通银行存管</string>
+    <string name="my_bank_card">银行卡管理</string>
+
+    <string name="bind_bank_content">绑卡后可进行充值、提现并 <font color='#ffa90a'>可同步原存管余额</font>等操作</string>
+
+    <string name="management">管理</string>
+    <string name="untied_bank_card">解绑银行卡</string>
+    <string name="personal_info">个人信息</string>
+    <string name="password_management">密码管理</string>
+
+    <string name="lease_transation_record">交易记录</string>
+    <string name="mmt_bind_card_details">完善个人信息后\n可进行充值、提现、租赁等操作</string>
+    <string name="bind_card">绑定银行卡</string>
+    <string name="mmt_withdraw">租赁账户提现</string>
+    <string name="yb_withdraw">存管账户提现</string>
+    <string name="rent_new">租赁物信息</string>
+    <string name="cash_withdrawal">提现中</string>
+    <string name="commissioned">委托中</string>
+    <string name="pic_save_error">图片保存失败</string>
+    <string name="pic_save_suc">图片保存成功</string>
+
 </resources>
+

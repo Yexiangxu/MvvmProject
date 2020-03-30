@@ -3,15 +3,8 @@ package com.lazyxu.film.ui
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.lazyxu.base.router.RouterUrl
-import com.lazyxu.film.R
-import com.lazyxu.film.data.FilmUseCase
-import com.lazyxu.film.databinding.ActivityHotfilmBinding
-import dagger.android.AndroidInjection
-import javax.inject.Inject
 
 /**
  * User: Lazy_xu

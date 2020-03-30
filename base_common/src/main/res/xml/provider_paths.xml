@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
     <!--
-    <files-path>       getFilesDir()  /data/data//files目录
+    <files-path>       getFilesDir()  /model/model//files目录
     -->
     <!--
     apk安装
@@ -13,7 +13,7 @@
         path="." />
     <!--相机相册裁剪
      外部内存卡根目录下的APP公共目录，对应根目录等价于Context的getExternalFilesDir(String)
-     路径：/storage/emulated/0/Android/data/com.xxx.xxx
+     路径：/storage/emulated/0/Android/model/com.xxx.xxx
      -->
     <external-files-path
         name="external_file_path"

@@ -1,27 +1,21 @@
 package com.lazyxu.user.data
 
 import com.lazyxu.base.data.BaseBean
-import com.lazyxu.user.data.entity.db.User
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
+import com.lazyxu.user.data.entity.db.LoginRequestModel
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.Headers
 import retrofit2.http.POST
 
+/**
+ * BaseBean<Any>
+ */
 interface UserApiService {
     /**
-     * 玩安卓登录
-     *
-     * @param username 用户名
-     * @param password 密码
+     * 检查手机号是否已注册
      */
-    @FormUrlEncoded
-    @POST("https://www.wanandroid.com/user/login")
-    suspend fun login(@Field("username") username: String, @Field("password") password: String): BaseBean<User>
-//    /**
-//     * 玩安卓注册
-//     */
-//    @FormUrlEncoded
-//    @POST("https://www.wanandroid.com/user/register")
-//    fun register(@Field("username") username: String, @Field("password") password: String, @Field("repassword") repassword: String): Flowable<LoginBean>
-
+    @POST("/app-invest/login/isRegistered")
+    @Headers("Accept: application/json")
+    suspend fun isRegistered(@Body loginRequestModel: LoginRequestModel): Response<BaseBean<Boolean>>
 
 }

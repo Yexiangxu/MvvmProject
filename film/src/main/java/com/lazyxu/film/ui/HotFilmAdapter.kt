@@ -9,7 +9,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.lazyxu.film.BR
 import com.lazyxu.film.R
-import com.lazyxu.film.data.entity.FilmItemEntity
+import com.lazyxu.film.model.entity.FilmItemEntity
 
 /**
  * User: xuyexiang

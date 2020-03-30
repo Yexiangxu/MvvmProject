@@ -1,4 +1,4 @@
-package luyao.mvvm.core.base
+package com.lazyxu.base.base
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
@@ -17,9 +18,9 @@ import androidx.lifecycle.ViewModel
 import com.alibaba.android.arouter.launcher.ARouter
 import com.gyf.immersionbar.ktx.immersionBar
 import com.lazyxu.base.R
-import com.lazyxu.base.base.BaseViewModel
 import com.lazyxu.base.base.head.HeadToolbar
 import com.lazyxu.base.utils.ActivityStack
+import kotlinx.android.synthetic.main.include_toolbar_center.*
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 /**
@@ -29,11 +30,11 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
  */
 abstract class BaseActivity<VM : ViewModel, DB : ViewDataBinding> : AppCompatActivity() {
     protected lateinit var mViewModel: VM
-    protected val mDataBinding: DB by lazy { DataBindingUtil.setContentView<DB>(this, mLayoutId) }
+    private val mDataBinding: DB by lazy { DataBindingUtil.setContentView<DB>(this, mLayoutId) }
     private var mLayoutId: Int = 0
-    private var mTitleBar: Int = 0
-    private var mToolbar: Toolbar? = null
-    private var mToolbarTitle: Int = 0
+    //    private var mToolBarRes: Int = -1
+    private var mToolBar: Toolbar? = null
+    private var mToolbarTitle: Any? = null
     private var mBackDrawable: Int = 0
     private var mToolbarTitleColor: Int = 0
     override fun onDestroy() {
@@ -63,7 +64,7 @@ abstract class BaseActivity<VM : ViewModel, DB : ViewDataBinding> : AppCompatAct
     private fun initHeader() {
         val headToolbar = headToolbar()
         mLayoutId = headToolbar.layoutId
-        mTitleBar = headToolbar.titleBar
+        //这里设置 mToolbarTitle 必须要使用通用标题的toolbar，若个别页面不使用include的toolbar则不能在这里设置 mToolbarTitle
         mToolbarTitle = headToolbar.toolbarTitle
         mBackDrawable = headToolbar.backDrawable
         mToolbarTitleColor = headToolbar.toolbarTitleColor
@@ -83,38 +84,49 @@ abstract class BaseActivity<VM : ViewModel, DB : ViewDataBinding> : AppCompatAct
 
     private fun initStatusBar() {
         immersionBar {
-            statusBarColor(R.color.statusbarColor)
-            navigationBarColor(R.color.colorPrimary)
-        }
-    }
+            //若要实现qq类状态栏和标题栏渐变 不能设置 statusBarColor
+//            statusBarColor(R.color.statusbarColor)
+            if (mToolBar != null) {
+                titleBar(mToolBar)
 
-    private fun initToolbar() {
-        if (mTitleBar != -1) {
-            if (findViewById<View>(mTitleBar) is Toolbar) {
-                mToolbar = findViewById(mTitleBar)
-                setSupportActionBar(mToolbar)
-                supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-                //设置返回图标
-                if (mBackDrawable != -1) {
-                    supportActionBar!!.setHomeAsUpIndicator(mBackDrawable)
-                }
-                mToolbar!!.setNavigationOnClickListener { finish() }
-                //                  getSupportActionBar().setDisplayShowTitleEnabled(false);//隐藏居左标题,暂留用来处理标题居中和居左两种情况
-                if (mToolbarTitle != -1) {
-                    supportActionBar!!.setTitle(mToolbarTitle)
-                }
-                if (mToolbarTitleColor != -1) {
-                    mToolbar!!.setTitleTextColor(ContextCompat.getColor(this, mToolbarTitleColor))
-                }
             }
         }
     }
 
+    private fun initToolbar() {
+        if (mToolbarTitle != -1) {
+            mToolBar = centerToolbar
+            mToolBar?.apply { setToolBar(this) }
+        }
+    }
 
-
-
-    override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    private fun setToolBar(toolbar: Toolbar) {
+        setSupportActionBar(toolbar)
+        val actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayShowTitleEnabled(false)//是否显示，自定义居中这里不能显示(隐藏居左标题,暂留用来处理标题居中和居左两种情况)
+            actionBar.setDisplayHomeAsUpEnabled(true)//是否显示返回键
+            if (mBackDrawable != -1) {
+                actionBar.setHomeAsUpIndicator(mBackDrawable)
+            } else {
+                actionBar.setHomeAsUpIndicator(R.drawable.icon_back)
+            }
+        }
+        if (mToolbarTitle != -1) {
+            // supportActionBar!!.setTitle(mToolbarTitle)
+            if (mToolbarTitle is String) {
+                tvTitleCenter.text = mToolbarTitle as String
+            } else if (mToolbarTitle is Int) {
+                tvTitleCenter.text = resources.getString(mToolbarTitle as Int)
+            }
+        }
+        if (mToolbarTitleColor != -1) {
+            // mToolBar!!.setTitleTextColor(ContextCompat.getColor(this, mToolbarTitleColor))
+            tvTitleCenter.setTextColor(ContextCompat.getColor(this, mToolbarTitleColor))
+        }
+        toolbar.setNavigationOnClickListener {
+            supportFinishAfterTransition()//和 finish() 区别
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -123,6 +135,12 @@ abstract class BaseActivity<VM : ViewModel, DB : ViewDataBinding> : AppCompatAct
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase))
+    }
+
 
     /**
      * 点击非edittext处软键盘消失

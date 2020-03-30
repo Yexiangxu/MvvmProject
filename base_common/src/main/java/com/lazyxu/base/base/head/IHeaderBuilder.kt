@@ -4,18 +4,29 @@ import androidx.annotation.ColorRes
 import androidx.annotation.IdRes
 import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
-
+import androidx.appcompat.widget.Toolbar
 
 
 interface IHeaderBuilder {
     fun layoutId(@LayoutRes layoutId: Int): HeaderBuilder
+    fun toolBarRes(@IdRes toolBar: Int): HeaderBuilder
 
-    fun titleBar(@IdRes titleBar: Int): HeaderBuilder
+
+    fun toolbarTitle(toolbarTitle: Any): HeaderBuilder
+    fun backDrawable( backDrawable: Int): HeaderBuilder
+
+
+
+
+
+
+
+
+
 
 
     fun menuId(@IdRes menuId: Int): HeaderBuilder
 
-    fun toolbarTitle(@StringRes toolbarTitle: Int): HeaderBuilder
 
     fun toolbarTitleSize(@StringRes textSize: Int): HeaderBuilder
 
@@ -23,7 +34,6 @@ interface IHeaderBuilder {
 
     fun toolbarBgColor(@ColorRes toolbarBgColor: Int): HeaderBuilder
 
-    fun backDrawable(@ColorRes backDrawable: Int): HeaderBuilder
 
     fun loadingTargetView(@LayoutRes loadingTargetView: Int): HeaderBuilder
 

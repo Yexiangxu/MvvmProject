@@ -1,8 +1,22 @@
 package com.lazyxu.base.utils;
 
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringFormatUtil {
+
+    public static String replaceBlank(String str) {
+        String dest = "";
+        if (str != null) {
+            Pattern p = Pattern.compile("\\s*|\t|\r|\n");
+            Matcher m = p.matcher(str);
+            if (m.find()) {
+                dest = m.replaceAll("");
+            }
+        }
+        return dest;
+    }
 
     /**
      * 格式化导演、主演名字

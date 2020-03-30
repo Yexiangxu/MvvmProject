@@ -3,9 +3,8 @@ package com.lazyxu.base.base.head
 
 class HeadToolbar {
     var layoutId = -1
-        internal set
-    var titleBar = -1
-    var toolbarTitle = -1
+    var toolbarTitle:Any ?= null
+    var toolBar = -1
     var backDrawable = -1
     var toolbarTitleColor = -1
 

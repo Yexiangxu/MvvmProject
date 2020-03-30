@@ -11,7 +11,7 @@ sealed class RespondResult<out T : Any> {
 
     override fun toString(): String {
         return when (this) {
-            is Success<*> -> "Success[data=$data]"
+            is Success<*> -> "Success[model=$data]"
             is Error -> "Error[exception=$exception]"
         }
     }

@@ -2,6 +2,7 @@ package com.lazyxu.user.ui.login
 
 import androidx.lifecycle.Observer
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.lazyxu.base.base.BaseActivity
 import com.lazyxu.base.base.head.HeadToolbar
 import com.lazyxu.base.base.head.HeaderBuilder
 import com.lazyxu.base.router.ArouterUtils
@@ -10,7 +11,6 @@ import com.lazyxu.base.utils.AppToast
 import com.lazyxu.user.BR
 import com.lazyxu.user.R
 import com.lazyxu.user.databinding.ActivityLoginBinding
-import luyao.mvvm.core.base.BaseActivity
 import org.koin.androidx.viewmodel.ext.android.getViewModel
 
 /**
@@ -25,16 +25,19 @@ class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
     override fun initViewModel(): LoginViewModel = getViewModel()
 
     private var loginNextPath: String? = RouterUrl.MAIN
+
     override fun headToolbar(): HeadToolbar {
         return HeaderBuilder()
                 .layoutId(R.layout.activity_login)
-                .titleBar(R.id.commoninclude_toolbar)
+                .toolBarRes(R.id.centerToolbar)
                 .toolbarTitle(R.string.login)
                 .build()
     }
 
 
     override fun initDatas() {
+
+
         loginNextPath = intent.getStringExtra(RouterUrl.PATH)
         mViewModel.apply {
             loginUiState.observe(this@LoginActivity, Observer {

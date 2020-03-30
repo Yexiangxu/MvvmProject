@@ -3,6 +3,7 @@
     package="com.lazyxu.user">
 
     <application>
+        <activity android:name=".ui.loginorregister.LoginOrRegisterActivity" />
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.SettingActivity" />
         <activity android:name=".ui.AboutActivity" />

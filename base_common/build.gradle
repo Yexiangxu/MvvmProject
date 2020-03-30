@@ -53,6 +53,7 @@ dependencies {
     api 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
     api 'androidx.cardview:cardview:1.0.0'
     api 'androidx.viewpager2:viewpager2:1.0.0'
+    api 'com.android.support:multidex:1.0.3'
     //===================debug======================
     api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
     api 'com.orhanobut:logger:2.2.0'
@@ -61,8 +62,8 @@ dependencies {
     //kotlin
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 //    api "androidx.core:core-ktx:1.2.0-rc01"
-    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2'
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0"
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3'//依赖协程核心库
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.3"//赖当前平台所对应的平台库
     //===================network======================
     api 'com.squareup.retrofit2:retrofit:2.7.0'
     api 'com.squareup.retrofit2:converter-gson:2.7.0'

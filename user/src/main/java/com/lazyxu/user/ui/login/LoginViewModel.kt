@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.lazyxu.base.data.RespondResult
 import com.lazyxu.base.utils.AppToast
 import com.lazyxu.user.data.entity.db.User
-import com.lazyxu.user.data.repository.LoginRepository
+import com.lazyxu.user.data.repository.UserRepositoryImpl
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -19,7 +19,7 @@ import kotlinx.coroutines.withContext
  * FIXME
  */
 
-class LoginViewModel(val loginRepository: LoginRepository) : ViewModel() {
+class LoginViewModel(private val loginRepository: UserRepositoryImpl) : ViewModel() {
     var userPhone = ObservableField<String>()
     var userPassword = ObservableField<String>()
     val loginUiState = MutableLiveData<LoginUiState>()
@@ -45,10 +45,12 @@ class LoginViewModel(val loginRepository: LoginRepository) : ViewModel() {
         }
     }
 
-    val verifyInput: (String) -> Unit = { loginEnableJudge() }
+    val verifyInput: ((String) -> Unit)? = { loginEnableJudge() }
     private fun loginEnableJudge() {
-        emitUiState(enableLoginButton = isInputValid(userPhone.get() ?: "", userPassword.get() ?: ""))
+        emitUiState(enableLoginButton = isInputValid(userPhone.get() ?: "", userPassword.get()
+                ?: ""))
     }
+
     private fun isInputValid(userName: String, passWord: String) = userName.isNotBlank() && passWord.isNotBlank()
     private inline fun <T : Any> checkResult(result: RespondResult<T>, success: (T) -> Unit, error: (String?) -> Unit) {
         if (result is RespondResult.Success) {

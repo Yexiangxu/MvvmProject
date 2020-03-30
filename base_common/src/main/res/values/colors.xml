@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--================状态栏 标题 颜色====================-->
+    <color name="default_title">#ffffffff</color>
+    <color name="statusbarColor">#ffce3d3a</color>
+
     <!--基本颜色-->
     <color name="white">#ffffffff</color>
-    <color name="statusbarColor">#ffce3d3a</color>
     <color name="navigationBarColor">#00ffffff</color>
     <color name="theme_colorControlHighlight">#bbbbbb</color>
 
@@ -37,4 +40,9 @@
     <color name="line_color">#5d8df7</color>
     <color name="half_transparent">#4000</color>
     <color name="black_ff333333">#ff333333</color>
+
+
+    <color name="color_3d3d3b">#3d3d3b</color>
+    <color name="gray_E2E2E2">#E2E2E2</color>
+
 </resources>

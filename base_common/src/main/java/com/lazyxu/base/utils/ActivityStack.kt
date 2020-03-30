@@ -27,7 +27,7 @@ class ActivityStack private constructor() {
 
     fun removeActivity(activity: Activity) {
         with(activity) {
-            if (!mActivities.isEmpty() && mActivities.contains(activity)) {
+            if (!mActivities.isEmpty() && mActivities.contains(this)) {
                 mActivities.remove(this)
                 this.finish()
             }

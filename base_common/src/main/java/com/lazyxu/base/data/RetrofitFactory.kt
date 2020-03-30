@@ -37,8 +37,10 @@ fun retrofit(context: Context, API_BASE_URL: String = "https://app.api.mmtvip.co
         .baseUrl(API_BASE_URL)
         .client(initOkhttp(context))
         .addConverterFactory(GsonConverterFactory.create())
-        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
         .build()
+
+
+
 
 
 private fun initOkhttp(context: Context): OkHttpClient {

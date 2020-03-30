@@ -1,6 +1,7 @@
 package com.lazyxu.base.base
 
 import android.app.Application
+import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
 import com.facebook.stetho.Stetho
 import com.lazyxu.base.BuildConfig
@@ -20,6 +21,11 @@ import com.squareup.leakcanary.LeakCanary
 open class BaseApplication : Application() {
     companion object {
         lateinit var INSTANCE: BaseApplication
+    }
+
+    override fun attachBaseContext(base: Context?) {
+        super.attachBaseContext(base)
+//        Multidex.install(this)
     }
 
     override fun onCreate() {
