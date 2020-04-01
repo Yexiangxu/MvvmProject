@@ -14,7 +14,7 @@ object ArouterUtils {
     fun unInterceptorClose(activity: Activity, url: String?) {
         with(activity) {
             ARouter.getInstance().build(url).greenChannel().navigation()
-            this.finish()
+//            this.finish()
         }
     }
 

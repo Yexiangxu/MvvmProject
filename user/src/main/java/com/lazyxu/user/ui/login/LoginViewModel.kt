@@ -35,12 +35,12 @@ class LoginViewModel(private val loginRepository: UserRepositoryImpl) : ViewMode
                 return@launch
             }
             emitUiState(showProgress = true)
-            val result = withContext(Dispatchers.IO) {
-                loginRepository.login(userPhone.get() ?: "", userPassword.get() ?: "")
-            }
-            checkResult(result,
-                    { emitUiState(showSuccess = it, enableLoginButton = true) },
-                    { emitUiState(showError = it, enableLoginButton = true) })
+//            val result = withContext(Dispatchers.IO) {
+//                loginRepository.login(userPhone.get() ?: "", userPassword.get() ?: "")
+//            }
+//            checkResult(result,
+//                    { emitUiState(showSuccess = it, enableLoginButton = true) },
+//                    { emitUiState(showError = it, enableLoginButton = true) })
 
         }
     }

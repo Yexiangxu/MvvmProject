@@ -9,10 +9,8 @@ import retrofit2.Response
  * Created by luyao
  * on 2019/4/10 9:42
  */
-class UserRepositoryImpl(val service: UserApiService) : UserRepository() {
-    override suspend fun isRegistered(loginRequestModel: LoginRequestModel): Response<BaseBean<Boolean>> {
-        service.isRegistered(loginRequestModel)
-    }
-
-
+class UserRepositoryImpl(val service: UserApiService) : UserRepository {
+//    override suspend fun isRegistered(loginRequestModel: LoginRequestModel): Response<BaseBean<Boolean>> {
+//        service.isRegistered(loginRequestModel)
+//    }
 }

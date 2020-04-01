@@ -14,18 +14,18 @@ open class BaseRepository {
         }
     }
 
-    suspend fun <T : Any> executeResponse(response: BaseBean<T>, successBlock: (suspend CoroutineScope.() -> Unit)? = null,
-                                          errorBlock: (suspend CoroutineScope.() -> Unit)? = null): RespondResult<T> {
-        return coroutineScope {
-            if (response.errorCode == -1) {
-                errorBlock?.let { it() }
-                RespondResult.Error(IOException(response.errorMsg))
-            } else {
-                successBlock?.let { it() }
-                RespondResult.Success(response.data)
-            }
-        }
-    }
+//    suspend fun <T : Any> executeResponse(response: BaseBean<T>, successBlock: (suspend CoroutineScope.() -> Unit)? = null,
+//                                          errorBlock: (suspend CoroutineScope.() -> Unit)? = null): RespondResult<T> {
+//        return coroutineScope {
+//            if (response.errorCode == -1) {
+//                errorBlock?.let { it() }
+//                RespondResult.Error(IOException(response.errorMsg))
+//            } else {
+//                successBlock?.let { it() }
+//                RespondResult.Success(response.data)
+//            }
+//        }
+//    }
 
 
 }

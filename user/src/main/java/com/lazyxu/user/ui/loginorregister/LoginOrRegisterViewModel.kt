@@ -32,14 +32,14 @@ class LoginOrRegisterViewModel(val loginRepository: UserRepositoryImpl) : ViewMo
     fun login() {
         viewModelScope.launch {
             emitUiState(showProgress = true)
-            userPhone.get()?.let {
-                val sign = EncryptUtils.INSTANCE.addParameter("mobile", it).sign()
-                val result = loginRepository.login(sign, it)
-                checkResult(result,
-                        { emitUiState(showSuccess = false) },
-                        { emitUiState(showError = it) })
-
-            }
+//            userPhone.get()?.let {
+//                val sign = EncryptUtils.INSTANCE.addParameter("mobile", it).sign()
+//                val result = loginRepository.login(sign, it)
+//                checkResult(result,
+//                        { emitUiState(showSuccess = false) },
+//                        { emitUiState(showError = it) })
+//
+//            }
         }
     }
 
