@@ -6,8 +6,16 @@
     <dimen name="movie_detail_height">165dp</dimen>
     <dimen name="etlogin_height">45dp</dimen>
     <dimen name="toolbar_height">50dp</dimen>
+    <dimen name="px1">1px</dimen>
+
+    <dimen name="dp1">1dp</dimen>
+
     <dimen name="dp2">2dp</dimen>
+    <dimen name="dp2_5">2.5dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp6">6dp</dimen>
     <dimen name="dp10">10dp</dimen>
+    <dimen name="dp13">13dp</dimen>
     <dimen name="dp16">16dp</dimen>
     <dimen name="dp20">20dp</dimen>
     <dimen name="dp24">24dp</dimen>
@@ -32,7 +40,6 @@
     <dimen name="dp26">26dp</dimen>
     <dimen name="dp39">39dp</dimen>
     <dimen name="dp8">8dp</dimen>
-    <dimen name="dp1">1dp</dimen>
     <dimen name="dp19">19dp</dimen>
     <dimen name="dp46">46dp</dimen>
     <dimen name="dp38">38dp</dimen>

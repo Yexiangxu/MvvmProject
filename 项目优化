@@ -10,7 +10,7 @@
 5.viewpager2 文字颜色、大小、下标（隐藏、显示、长短变化）
 6.首页下标封装
 7. 引导页封装
-8. 封装WebviewActivity（进度条）、VasSonic
+8. 封装WebviewActivity（进度条）、VasSonic、webview单独开进程（用binder、AIDL进程通信）
 9. 清除缓存
 10. application用线程
 

@@ -1,6 +1,7 @@
 package com.lazyxu.user.ui.login
 
 import androidx.lifecycle.Observer
+import androidx.viewpager2.widget.ViewPager2
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.lazyxu.base.base.BaseActivity
 import com.lazyxu.base.base.head.HeadToolbar
@@ -21,6 +22,7 @@ import org.koin.androidx.viewmodel.ext.android.getViewModel
  */
 @Route(path = RouterUrl.User.LOGIN)
 class LoginActivity : BaseActivity<LoginViewModel, ActivityLoginBinding>() {
+
     override fun bindingVariable(): Int = BR.viewModel
     override fun initViewModel(): LoginViewModel = getViewModel()
 

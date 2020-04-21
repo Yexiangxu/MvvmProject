@@ -32,13 +32,13 @@ object CommonUtils {
         return resoure.getDimension(resId)
     }
 
-    fun copy(content: String) {
-        if (!TextUtils.isEmpty(content)) {
-            val clipboard = BaseApplication.INSTANCE.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText(content, content)
-            clipboard.primaryClip = clip
-        }
-    }
+//    fun copy(content: String) {
+//        if (!TextUtils.isEmpty(content)) {
+//            val clipboard = BaseApplication.INSTANCE.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+//            val clip = ClipData.newPlainText(content, content)
+//            clipboard.primaryClip = clip
+//        }
+//    }
 
     /**
      * 获取系统剪切板内容
@@ -60,16 +60,16 @@ object CommonUtils {
      * 加上  manager.setText(null);  不然小米3Android6.0 清空无效
      * 因为api过期使用最新注意使用 manager.getPrimaryClip()，不然小米3Android6.0 清空无效
      */
-    fun clearClipboard() {
-        val manager = BaseApplication.INSTANCE.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        if (manager != null) {
-            try {
-                manager.primaryClip = manager.primaryClip!!
-                manager.text = null
-            } catch (e: Exception) {
-                Logger.e(e.message.toString())
-            }
-
-        }
-    }
+//    fun clearClipboard() {
+//        val manager = BaseApplication.INSTANCE.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+//        if (manager != null) {
+//            try {
+//                manager.primaryClip = manager.primaryClip!!
+//                manager.text = null
+//            } catch (e: Exception) {
+//                Logger.e(e.message.toString())
+//            }
+//
+//        }
+//    }
 }

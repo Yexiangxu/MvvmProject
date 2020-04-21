@@ -54,6 +54,9 @@ dependencies {
     api 'androidx.cardview:cardview:1.0.0'
     api 'androidx.viewpager2:viewpager2:1.0.0'
     api 'com.android.support:multidex:1.0.3'
+
+    //==================== UI =========================
+    api 'com.github.zhpanvip:BannerViewPager:2.7.4'
     //===================debug======================
     api 'com.facebook.stetho:stetho-okhttp3:1.5.0'
     api 'com.orhanobut:logger:2.2.0'

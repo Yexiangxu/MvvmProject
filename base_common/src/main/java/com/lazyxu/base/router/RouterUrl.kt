@@ -14,6 +14,7 @@ object RouterUrl {
     /**
      * app
      */
+    const val GUIDE = "/app/guide"
     const val MAIN = "/app/main"
     const val SEARCH = "/app/search"
 

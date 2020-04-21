@@ -1,5 +1,6 @@
 package com.lazyxu.mvvmproject
 
+import android.app.Activity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
  * Description:
  * FIXME
  */
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : Activity() {
     private lateinit var mdatabinding: ActivitySplashBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun jumpMain() {
-        ArouterUtils.unInterceptorClose(this, RouterUrl.User.LOGINORREGISTER)
+//        ArouterUtils.unInterceptorClose(this, RouterUrl.GUIDE)
     }
 
 
@@ -44,7 +45,7 @@ class SplashActivity : AppCompatActivity() {
         }
 
         override fun onFinish() {
-//            jumpMain()
+            jumpMain()
         }
     }
 

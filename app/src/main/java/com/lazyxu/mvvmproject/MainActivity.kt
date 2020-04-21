@@ -68,7 +68,7 @@ open class MainActivity : AppCompatActivity() {
                 message(text = clipContent)
                 positiveButton(text = "打开链接") {
                     ARouter.getInstance().build(RouterUrl.WEBVIEWMAIN).withString("webUrl", clipContent).navigation(this@MainActivity)
-                    CommonUtils.clearClipboard()
+//                    CommonUtils.clearClipboard()
                 }
             }
         }
